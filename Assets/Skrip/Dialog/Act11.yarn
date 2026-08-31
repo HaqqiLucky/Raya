@@ -1,4 +1,19 @@
-﻿title: Act11
+﻿title: Act11_0
 ---
-This is an example of a Yarn Spinner script. Write your dialogue here!
+Dalam hati: Aku dah nulis surat.. sekarang waktunya ngambil tugas ke mba anis
+-> Pagi.. mba
+Anisa : Pagi.. Tugas kamu hari ini bantuin pak ranto nyiram bunga
+Anisa : Dah itu aja
+-> Mbak keliatan capek? habis begadang kah?
+Anisa : Yah keliatan ya... Iya saya kemarin habis begadang ngurusin administrasi.. Capek ya.. makanya habis ini aku mau tidur aja di kamar
+-> Okey..
+
+===
+
+title: Act11_1
+---
+Dalam hati : Udah selesai... semoga ada yang ngambil surat ini dari dunia luar. sekarang waktunya kabur dari temp--
+Keadaan : * tiba tiba pandanganmu kabur, kepala merasa berat dan kamu jatuh.
+Keadaan : * Kamu terbangun di tempat yang tidak kau ketahui di hari esok
+
 ===
