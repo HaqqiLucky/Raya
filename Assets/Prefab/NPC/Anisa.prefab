@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3928971002181073758}
   - component: {fileID: 874376065092350726}
   - component: {fileID: 394237929245269108}
+  - component: {fileID: 8101167985237870782}
   m_Layer: 0
-  m_Name: TriggerInteractionArea
+  m_Name: TriggerInteractionArea&NPCControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +36,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &874376065092350726
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +93,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!61 &394237929245269108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,6 +140,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8101167985237870782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889385870644647353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422aae1a907324947b8e33b00e6c5719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmbilNamaNPCBuatdiShowOnTrigger
+  teksNama: {fileID: 0}
+  CanvasParentNama: {fileID: 0}
 --- !u!1 &3785259813112717577
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 3785259813112717577}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9430008, y: -1.3369999, z: 0}
+  m_LocalPosition: {x: 3.17, y: -1.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -175,7 +191,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8238143860085661211
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -232,6 +248,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 1
+  m_BlendShapeWeights: []
 --- !u!95 &643311069595805259
 Animator:
   serializedVersion: 7
