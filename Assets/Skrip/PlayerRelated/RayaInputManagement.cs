@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ public class RayaInputManagement : MonoBehaviour
     [Header("Masalah UI")]
     [SerializeField] private GameObject UIObjektif;
     [SerializeField] private GameObject KotakNama;
+    [SerializeField] private CinemachineCamera cinemachineCamera;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -56,23 +58,48 @@ public class RayaInputManagement : MonoBehaviour
     {
         playerInput.enabled = true;
         UIObjektif.SetActive(true);
+        // KameraNaikSelesaiDialog();
     }
     public void MulaiDialog()
     {
         playerInput.enabled = false;
-        Debug.Log("sampe sini1");
         UIObjektif.SetActive(false);
-        Debug.Log("sampe sini2");
+        // KameraTurunPasDialog();
     }
 
     public void InteractionWithNPC(InputAction.CallbackContext context)
     {
+        // Debug.Log("hdfwf");
         if (context.performed && KotakNama.activeSelf)
         {
-            MulaiDialog();
+            Debug.Log("hai");
         }
+
     }
 
+    public void KameraTurunPasDialog()
+    {
+        
+        LeanTween.cancel(cinemachineCamera.gameObject);
+        LeanTween.value(cinemachineCamera.gameObject, cinemachineCamera.Lens.OrthographicSize, 3f, 1f)
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnUpdate((float val) =>
+            {
+                cinemachineCamera.Lens.OrthographicSize = val;
+            });
+        // Debug.Log("kok sampe sini");
+    }
     
-    
+
+    public void KameraNaikSelesaiDialog()
+    {
+        // Debug.Log("harusnya ga sampe sini dlu");
+        LeanTween.cancel(cinemachineCamera.gameObject);
+        LeanTween.value(cinemachineCamera.gameObject, cinemachineCamera.Lens.OrthographicSize, 4f, 1f)
+            .setEase(LeanTweenType.easeInOutQuad)
+            .setOnUpdate((float val) =>
+            {
+                cinemachineCamera.Lens.OrthographicSize = val;
+            });
+    }
 }

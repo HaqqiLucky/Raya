@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using Yarn.Unity;
 
 public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
     private bool SudahKenal = false;
     [SerializeField] private TMP_Text teksNama;
     [SerializeField] private GameObject KotakNama;
+    // [SerializeField] private DialogueRunner dialogRunner;
+    // [SerializeField] private DialogueRunner dialogRunner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
