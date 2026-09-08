@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using Yarn.Unity;
@@ -5,15 +6,14 @@ using Yarn.Unity;
 public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
 {
 
+
     private bool SudahKenal = false;
     [SerializeField] private TMP_Text teksNama;
-    [SerializeField] private GameObject KotakNama;
-    // [SerializeField] private DialogueRunner dialogRunner;
-    // [SerializeField] private DialogueRunner dialogRunner;
+    [SerializeField] private TMP_Text namaAsliGO;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        KotakNama.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -22,9 +22,10 @@ public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
 
     }
 
+
     private void KeluarinNama()
     {
-        KotakNama.SetActive(true);
+        SceneControl.InstanceSceneControl.ShowKotakNama();
         if (SudahKenal == true)
             teksNama.text =  transform.parent.name;
 
@@ -37,14 +38,11 @@ public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
             KeluarinNama();
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        KotakNama.SetActive(false);
+        SceneControl.InstanceSceneControl.HideKotakNama();
     }
 
 
-    private void MasukDialog()
-    {
-        
-    }
 }

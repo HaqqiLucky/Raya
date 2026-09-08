@@ -1,12 +1,13 @@
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Yarn.Unity;
 
 public class RayaInputManagement : MonoBehaviour
 {
     [Header("Masalah UI")]
     [SerializeField] private GameObject UIObjektif;
-    [SerializeField] private GameObject KotakNama;
+    [SerializeField] private CanvasGroup KotakNamaCanvas;
     [SerializeField] private CinemachineCamera cinemachineCamera;
     private PlayerInput playerInput;
 
@@ -15,6 +16,7 @@ public class RayaInputManagement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+    [SerializeField] private DialogueRunner dialogRunner;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -64,15 +66,22 @@ public class RayaInputManagement : MonoBehaviour
     {
         playerInput.enabled = false;
         UIObjektif.SetActive(false);
+        SceneControl.InstanceSceneControl.HideKotakNama();
         // KameraTurunPasDialog();
     }
 
     public void InteractionWithNPC(InputAction.CallbackContext context)
     {
         // Debug.Log("hdfwf");
-        if (context.performed && KotakNama.activeSelf)
+        // pencet f
+        if (context.performed && KotakNamaCanvas.interactable)
         {
-            Debug.Log("hai");
+            // Debug.Log("Masuks ini");
+            if (!dialogRunner.IsDialogueRunning)
+            {
+                // Debug.Log("Masuks iniua");
+                _ = dialogRunner.StartDialogue("Act_1_2"); // ini tar ganti
+            }
         }
 
     }
