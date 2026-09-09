@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,8 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private GameObject UIObjektif;
     [SerializeField] private CanvasGroup KotakNamaCanvas;
     [SerializeField] private CinemachineCamera cinemachineCamera;
+    [SerializeField] private TMP_Text teksObjektif;
+    [SerializeField] private TMP_Text teksKotakNama;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -58,8 +61,17 @@ public class RayaInputManagement : MonoBehaviour
 
     public void DialogSelesai()
     {
+        SceneControl.InstanceSceneControl.actNow +=1;
         playerInput.enabled = true;
         UIObjektif.SetActive(true);
+        Debug.Log("objekfit skrng :" + QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif);
+        Debug.Log("nama npc skrng :" + QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString());
+        Debug.Log(SceneControl.InstanceSceneControl.actNow);
+
+
+
+        teksObjektif.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif;
+        teksKotakNama.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString();
         // KameraNaikSelesaiDialog();
     }
     public void MulaiDialog()
@@ -80,7 +92,7 @@ public class RayaInputManagement : MonoBehaviour
             if (!dialogRunner.IsDialogueRunning)
             {
                 // Debug.Log("Masuks iniua");
-                _ = dialogRunner.StartDialogue("Act_1_2"); // ini tar ganti
+                _ = dialogRunner.StartDialogue(QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow).namaAct); // ini tar ganti
             }
         }
 
@@ -102,6 +114,7 @@ public class RayaInputManagement : MonoBehaviour
 
     public void KameraNaikSelesaiDialog()
     {
+        
         // Debug.Log("harusnya ga sampe sini dlu");
         LeanTween.cancel(cinemachineCamera.gameObject);
         LeanTween.value(cinemachineCamera.gameObject, cinemachineCamera.Lens.OrthographicSize, 4f, 1f)

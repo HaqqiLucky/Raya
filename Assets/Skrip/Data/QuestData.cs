@@ -5,17 +5,17 @@ using UnityEngine;
 
 public enum NPCidTranlate
 {
-    Anisa = 01000001,
+    Anisa = 0b01000001,
     Ranto = 102,
     Indah = 103,
     Raka = 104,
     Jainah = 105,
     Nia = 106,
-    Haqi =  01001000,
-    Liam = 01001100,
-    Sakinah = 01010011,
-    Raya = 01010010,
-    Reza = 00111111
+    Haqi =  0b01001000,
+    Liam = 0b01001100,
+    Sakinah = 0b01010011,
+    Raya = 0b01010010,
+    Reza = 0b00111111
 
 
 }
@@ -40,10 +40,10 @@ public class QuestVariable
 
 public class QuestData
 {
-    public List<QuestVariable> daftarQuest = new List<QuestVariable>()
+    public static List<QuestVariable> daftarQuest = new List<QuestVariable>()
     {
         // act 1
-        new QuestVariable(1, NPCidTranlate.Anisa, "Bicara pada nona berbaju hijau", "Act_1_2"),
+        new QuestVariable(1, NPCidTranlate.Anisa, "Bicara pada nona berbaju  hijau", "Act_1_2"),
         new QuestVariable(2, NPCidTranlate.Ranto, "Cari orang dengan nama pak ranto", "Act_1_3"),
         new QuestVariable(3, NPCidTranlate.Ranto, "Cari ketiga kucing di sekitar", "Act_1_4"), // butuh variabel int kucing yang di ambil 1/3
         new QuestVariable(4, NPCidTranlate.Indah, "Cari orang dengan nama Indah", "Act_1_5"),
@@ -127,5 +127,15 @@ public class QuestData
         new QuestVariable(55, NPCidTranlate.Anisa, "Kalahkan dia", "Act12_1"),
         new QuestVariable(56, NPCidTranlate.Raya, "lorem ipsum dolor sit amet consectetur adipiscing elit ipsum similique tempore duis velit consectetur", "Act12_2"),
 
+
+
+
+
     };
+
+    public static QuestVariable GetQuestDenganId(int id)
+    {
+        return daftarQuest.Find(q => q.idQuestData == id);
+    }
+
 }

@@ -1,8 +1,13 @@
 using System.Collections.Generic;
+using TMPro;
+using Unity.VectorGraphics;
 using UnityEngine;
 
 public class SceneControl : MonoBehaviour
 {
+    public int actNow = 0;
+    
+
 
     [SerializeField] private CanvasGroup KotakNamaCanvas;
     // public string actSaatIni;
@@ -17,6 +22,17 @@ public class SceneControl : MonoBehaviour
         HideKotakNama();
         
     }
+    // public void QuestDataControl(int idNPC, string objektif, string acting)
+    // {
+    //     QuestVariable questNow = QuestData.GetQuestDenganId(actNow);
+    //     if (questNow != null)
+    //     {
+    //         // idNPC  = questNow.idNPC;
+    //         objektif = questNow.objektif;
+    //         acting = questNow.namaAct;
+    //     }
+    //     return;
+    // }
 
     private void Awake()
     {
@@ -26,11 +42,6 @@ public class SceneControl : MonoBehaviour
             return;
         }
         InstanceSceneControl = this;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ShowKotakNama()
