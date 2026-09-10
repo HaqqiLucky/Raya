@@ -1,5 +1,6 @@
 using TMPro;
 using Unity.Cinemachine;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Yarn.Unity;
@@ -16,14 +17,17 @@ public class RayaInputManagement : MonoBehaviour
 
     [Header("Masalah Player")]
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private BoxCollider2D RayaColliderTrigger;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
     [SerializeField] private DialogueRunner dialogRunner;
+    // [SerializeField] private DialogueRunner dialogRunner;    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        RayaColliderTrigger = GetComponentInChildren<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
@@ -59,20 +63,26 @@ public class RayaInputManagement : MonoBehaviour
 
     }
 
+    public void ActManagement()
+    {
+        teksObjektif.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif;
+        teksKotakNama.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString();
+    }
     public void DialogSelesai()
     {
         SceneControl.InstanceSceneControl.actNow +=1;
         playerInput.enabled = true;
         UIObjektif.SetActive(true);
-        Debug.Log("objekfit skrng :" + QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif);
-        Debug.Log("nama npc skrng :" + QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString());
-        Debug.Log(SceneControl.InstanceSceneControl.actNow);
 
+        ActManagement();
 
-
-        teksObjektif.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif;
-        teksKotakNama.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString();
-        // KameraNaikSelesaiDialog();
+        // semua kondisi mengenai act
+        switch (SceneControl.InstanceSceneControl.actNow)
+        {
+            case (3) :
+                SceneControl.InstanceSceneControl.Act3Kucing();
+                break;
+        }
     }
     public void MulaiDialog()
     {
@@ -88,15 +98,39 @@ public class RayaInputManagement : MonoBehaviour
         // pencet f
         if (context.performed && KotakNamaCanvas.interactable)
         {
-            // Debug.Log("Masuks ini");
-            if (!dialogRunner.IsDialogueRunning)
+
+            if (!teksKotakNama.text.Contains("Ambil"))
             {
-                // Debug.Log("Masuks iniua");
-                _ = dialogRunner.StartDialogue(QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow).namaAct); // ini tar ganti
+                if (!dialogRunner.IsDialogueRunning)
+                {
+                    _ = dialogRunner.StartDialogue(QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow).namaAct); // ini tar ganti
+                }
             }
+            else
+            {
+                foreach (Collider2D hit in Physics2D.OverlapBoxAll(RayaColliderTrigger.bounds.center, RayaColliderTrigger.bounds.size, 0f))
+                {
+                    if (hit.CompareTag("Hewani"))
+                    {
+
+                        if (SceneControl.InstanceSceneControl.CatsTaken > 2)
+                        {
+                            DialogSelesai();
+                        }
+
+                        Destroy(hit.gameObject);
+                        break;
+                    }
+                }
+                
+            }
+
+
         }
 
     }
+
+    
 
     public void KameraTurunPasDialog()
     {
@@ -123,5 +157,6 @@ public class RayaInputManagement : MonoBehaviour
             {
                 cinemachineCamera.Lens.OrthographicSize = val;
             });
+        
     }
 }

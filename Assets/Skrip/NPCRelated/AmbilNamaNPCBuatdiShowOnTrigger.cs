@@ -6,14 +6,14 @@ using Yarn.Unity;
 public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
 {
 
-
+    private string teksNamaAsliBuatCompare;
     private bool SudahKenal = false;
     [SerializeField] private TMP_Text teksNama;
     [SerializeField] private TMP_Text namaAsliGO;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        teksNamaAsliBuatCompare = transform.parent.name;
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && teksNamaAsliBuatCompare.Contains(QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString()))
         {
             KeluarinNama();
         }
@@ -42,6 +42,11 @@ public class AmbilNamaNPCBuatdiShowOnTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         SceneControl.InstanceSceneControl.HideKotakNama();
+    }
+
+    public void DestroyThisNPC()
+    {
+        Destroy(transform.parent);
     }
 
 

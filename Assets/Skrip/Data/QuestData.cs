@@ -15,8 +15,10 @@ public enum NPCidTranlate
     Liam = 0b01001100,
     Sakinah = 0b01010011,
     Raya = 0b01010010,
-    Reza = 0b00111111
+    Reza = 0b00111111,
 
+    // tidak npc
+    Ambil = 1
 
 }
 [Serializable]
@@ -45,25 +47,26 @@ public class QuestData
         // act 1
         new QuestVariable(1, NPCidTranlate.Anisa, "Bicara pada nona berbaju  hijau", "Act_1_2"),
         new QuestVariable(2, NPCidTranlate.Ranto, "Cari orang dengan nama pak ranto", "Act_1_3"),
-        new QuestVariable(3, NPCidTranlate.Ranto, "Cari ketiga kucing di sekitar", "Act_1_4"), // butuh variabel int kucing yang di ambil 1/3
-        new QuestVariable(4, NPCidTranlate.Indah, "Cari orang dengan nama Indah", "Act_1_5"),
-        new QuestVariable(5, NPCidTranlate.Indah, "Ambil air dari sumur sebelah barat desa", "Act_1_6"), // butuh variabel int ember 1/5
+        new QuestVariable(3, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar", "Act_1_3"),
+        new QuestVariable(4, NPCidTranlate.Ranto, "Kembali ke Pak Ranto", "Act_1_4"), // butuh variabel int kucing yang di ambil 1/3
+        new QuestVariable(5, NPCidTranlate.Indah, "Cari orang dengan nama Indah", "Act_1_5"),
+        new QuestVariable(6, NPCidTranlate.Indah, "Ambil air dari sumur sebelah barat desa", "Act_1_6"), // butuh variabel int ember 1/5
 
 
 
         // act 2
-        new QuestVariable(6, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
-        new QuestVariable(7, NPCidTranlate.Raya, "Buka surat", "Act2_1"), //ini harusnya surat
-        new QuestVariable(8, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
+        new QuestVariable(7, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
+        new QuestVariable(8, NPCidTranlate.Raya, "Buka surat", "Act2_1"), //ini harusnya surat
+        new QuestVariable(9, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
 
 
         // act3
-        new QuestVariable(9, NPCidTranlate.Anisa, "Ambil tugas dari anisa", "Act3_0"),
-        new QuestVariable(10, NPCidTranlate.Jainah, "Cari orang dengan nama Jainah", "Act3_1"),
-        new QuestVariable(11, NPCidTranlate.Raka, "Cari orang dengan nama Raka", "Act3_2"),
-        new QuestVariable(12, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_3"), // 1/4 jalan
-        new QuestVariable(13, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_4"), // 2/4 jalan
-        new QuestVariable(14, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_5"), // 3/4 jalan
+        new QuestVariable(10, NPCidTranlate.Anisa, "Ambil tugas dari anisa", "Act3_0"),
+        new QuestVariable(22, NPCidTranlate.Jainah, "Cari orang dengan nama Jainah", "Act3_1"),
+        new QuestVariable(23, NPCidTranlate.Raka, "Cari orang dengan nama Raka", "Act3_2"),
+        new QuestVariable(24, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_3"), // 1/4 jalan
+        new QuestVariable(25, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_4"), // 2/4 jalan
+        new QuestVariable(26, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_5"), // 3/4 jalan
 
         // act4 
         new QuestVariable(15, NPCidTranlate.Raya, "....", "Act4_0"),

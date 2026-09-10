@@ -1,15 +1,28 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VectorGraphics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SceneControl : MonoBehaviour
 {
-    public int actNow = 0;
+    public int actNow = 0;    // ini sama dengan id di data
     
-
-
+    [Header("UI")]
+    [SerializeField] private CanvasGroup LayarHitamUI;
+    [SerializeField] private GameObject ParentCats;
     [SerializeField] private CanvasGroup KotakNamaCanvas;
+
+
+    [Header("Cats")]
+    [SerializeField] private GameObject Gradle;
+    [SerializeField] private GameObject Musi;
+    [SerializeField] private GameObject Doker;
+
+
+    [Header("Variable")]
+    public int CatsTaken;
     // public string actSaatIni;
     // public string[] objektifAll;
 
@@ -20,6 +33,7 @@ public class SceneControl : MonoBehaviour
     void Start()
     {
         HideKotakNama();
+        ParentCats.SetActive(false);
         
     }
     // public void QuestDataControl(int idNPC, string objektif, string acting)
@@ -52,6 +66,16 @@ public class SceneControl : MonoBehaviour
         // Debug.Log("aku di panggil");
     }
 
+
+    public LTDescr LayarHitam(bool Tampilkan)
+    {
+        float alphaTarget = Tampilkan ? 1f : 0f;
+        LayarHitamUI.blocksRaycasts = Tampilkan;
+        LayarHitamUI.interactable = Tampilkan;
+        return LeanTween.alphaCanvas(LayarHitamUI, alphaTarget, 1f)
+                .setEase(LeanTweenType.easeOutQuad);
+    }
+
     public void HideKotakNama()
     {
         KotakNamaCanvas.alpha = 0f;
@@ -59,4 +83,20 @@ public class SceneControl : MonoBehaviour
         KotakNamaCanvas.blocksRaycasts = false;
         // Debug.Log("udah kehide dari " + gameObject.name);
     }
+
+    public void Act3Kucing()
+    {
+        if (!ParentCats.activeSelf)
+        {
+            LayarHitam(true).setOnComplete(() =>
+            {
+                ParentCats.SetActive(true);
+                LayarHitam(false);
+            });
+        }
+
+
+ 
+    }
+
 }
