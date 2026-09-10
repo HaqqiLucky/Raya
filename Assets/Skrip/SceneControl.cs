@@ -13,6 +13,8 @@ public class SceneControl : MonoBehaviour
     [SerializeField] private CanvasGroup LayarHitamUI;
     [SerializeField] private GameObject ParentCats;
     [SerializeField] private CanvasGroup KotakNamaCanvas;
+    [SerializeField] private CanvasGroup ObjektifDiPerbarui;
+    
 
 
     [Header("Cats")]
@@ -32,6 +34,7 @@ public class SceneControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // ObjektifDiPerbarui.gameObject.SetActive(false);
         HideKotakNama();
         ParentCats.SetActive(false);
         
@@ -56,6 +59,18 @@ public class SceneControl : MonoBehaviour
             return;
         }
         InstanceSceneControl = this;
+    }
+
+    public void ShowObjektifDiperbarui()
+    {
+        ObjektifDiPerbarui.alpha = 0f;
+        LeanTween.alphaCanvas(ObjektifDiPerbarui, 1f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
+    }
+
+    public void HideObjektifDiperbarui()
+    {
+        ObjektifDiPerbarui.alpha = 1f;
+        LeanTween.alphaCanvas(ObjektifDiPerbarui, 0f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
     }
 
     public void ShowKotakNama()

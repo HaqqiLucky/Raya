@@ -47,7 +47,7 @@ public class QuestData
         // act 1
         new QuestVariable(1, NPCidTranlate.Anisa, "Bicara pada nona berbaju  hijau", "Act_1_2"),
         new QuestVariable(2, NPCidTranlate.Ranto, "Cari orang dengan nama pak ranto", "Act_1_3"),
-        new QuestVariable(3, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar", "Act_1_3"),
+        new QuestVariable(3, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar kebun bagian utara, sekitar pohon-pohon di pusat dan di lapangan", "Act_1_3"),
         new QuestVariable(4, NPCidTranlate.Ranto, "Kembali ke Pak Ranto", "Act_1_4"), // butuh variabel int kucing yang di ambil 1/3
         new QuestVariable(5, NPCidTranlate.Indah, "Cari orang dengan nama Indah", "Act_1_5"),
         new QuestVariable(6, NPCidTranlate.Indah, "Ambil air dari sumur sebelah barat desa", "Act_1_6"), // butuh variabel int ember 1/5

@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.Cinemachine;
 using Unity.VectorGraphics;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Yarn.Unity;
@@ -13,6 +14,8 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private CinemachineCamera cinemachineCamera;
     [SerializeField] private TMP_Text teksObjektif;
     [SerializeField] private TMP_Text teksKotakNama;
+    [SerializeField] private GameObject CatsAroundHouse;
+    
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -63,10 +66,19 @@ public class RayaInputManagement : MonoBehaviour
 
     }
 
+    private void BuatInvoke()
+    {
+        SceneControl.InstanceSceneControl.HideObjektifDiperbarui();
+        
+    }
     public void ActManagement()
     {
+        SceneControl.InstanceSceneControl.ShowObjektifDiperbarui();
+
         teksObjektif.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif;
         teksKotakNama.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString();
+        Invoke("BuatInvoke", 2f);
+        Debug.Log("di panggil");
     }
     public void DialogSelesai()
     {
@@ -75,6 +87,7 @@ public class RayaInputManagement : MonoBehaviour
         UIObjektif.SetActive(true);
 
         ActManagement();
+        Debug.Log("Sampe sini");
 
         // semua kondisi mengenai act
         switch (SceneControl.InstanceSceneControl.actNow)
@@ -110,17 +123,24 @@ public class RayaInputManagement : MonoBehaviour
             {
                 foreach (Collider2D hit in Physics2D.OverlapBoxAll(RayaColliderTrigger.bounds.center, RayaColliderTrigger.bounds.size, 0f))
                 {
+
+
                     if (hit.CompareTag("Hewani"))
-                    {
-
-                        if (SceneControl.InstanceSceneControl.CatsTaken > 2)
                         {
-                            DialogSelesai();
-                        }
+                            Destroy(hit.gameObject);
+                            SceneControl.InstanceSceneControl.CatsTaken += 1;
+                            if (SceneControl.InstanceSceneControl.CatsTaken == 3)
+                                {
+                                    CatsAroundHouse.SetActive(true);
+                                    DialogSelesai(); 
+                                    
+                                }
+                            Debug.Log("udah berhasil di tambah 1 sekarang ada "+ SceneControl.InstanceSceneControl.CatsTaken);
+                            break;
 
-                        Destroy(hit.gameObject);
-                        break;
-                    }
+
+                            
+                        }
                 }
                 
             }
