@@ -18,7 +18,8 @@ public enum NPCidTranlate
     Reza = 0b00111111,
 
     // tidak npc
-    Ambil = 1
+    Ambil = 1,
+    Sumoar = 2
 
 }
 [Serializable]
@@ -28,6 +29,8 @@ public class QuestVariable
     public NPCidTranlate idNPC;
     public string objektif;
     public string namaAct;
+    public int PersonalVariableAlwaysUpdated;
+    public int PersonalVariableStatic;
 
     // buat constructor
     public QuestVariable(int idQD, NPCidTranlate idNP, string obj, string act)
@@ -47,17 +50,23 @@ public class QuestData
         // act 1
         new QuestVariable(1, NPCidTranlate.Anisa, "Bicara pada nona berbaju  hijau", "Act_1_2"),
         new QuestVariable(2, NPCidTranlate.Ranto, "Cari orang dengan nama pak ranto", "Act_1_3"),
-        new QuestVariable(3, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar kebun bagian utara, sekitar pohon-pohon di pusat dan di lapangan", "Act_1_3"),
-        new QuestVariable(4, NPCidTranlate.Ranto, "Kembali ke Pak Ranto", "Act_1_4"), // butuh variabel int kucing yang di ambil 1/3
-        new QuestVariable(5, NPCidTranlate.Indah, "Cari orang dengan nama Indah", "Act_1_5"),
-        new QuestVariable(6, NPCidTranlate.Indah, "Ambil air dari sumur sebelah barat desa", "Act_1_6"), // butuh variabel int ember 1/5
-
+        new QuestVariable(3, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar kebun bagian utara, sekitar pohon-pohon di pusat dan di lapangan (0/3)", "Act_1_3"), // butuh variabel int kucing yang di ambil 1/3
+        new QuestVariable(4, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar kebun bagian utara, sekitar pohon-pohon di pusat dan di lapangan (1/3)", "Act_1_3"),
+        new QuestVariable(5, NPCidTranlate.Ambil, "Cari ketiga kucing di sekitar kebun bagian utara, sekitar pohon-pohon di pusat dan di lapangan (2/3)", "Act_1_3"),
+        new QuestVariable(6, NPCidTranlate.Ranto, "Kembali ke Pak Ranto (3/3)", "Act_1_4"), 
+        new QuestVariable(7, NPCidTranlate.Indah, "Cari orang dengan nama Indah", "Act_1_5"),
+        new QuestVariable(8, NPCidTranlate.Sumoar, "Ambil air dari sumur sebelah barat desa (0/5)", "Act_1_5"), // butuh variabel int ember 1/5
+        new QuestVariable(9, NPCidTranlate.Sumoar, "Ambil air dari sumur sebelah barat desa (1/5)", "Act_1_5"),
+        new QuestVariable(10, NPCidTranlate.Sumoar, "Ambil air dari sumur sebelah barat desa (2/5)", "Act_1_5"),
+        new QuestVariable(11, NPCidTranlate.Sumoar, "Ambil air dari sumur sebelah barat desa (3/5)", "Act_1_5"),
+        new QuestVariable(12, NPCidTranlate.Sumoar, "Ambil air dari sumur sebelah barat desa (4/5)", "Act_1_5"),
+        new QuestVariable(13, NPCidTranlate.Indah, "Kembali bicara dengan indah (5/5)", "Act_1_6"),
 
 
         // act 2
-        new QuestVariable(7, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
-        new QuestVariable(8, NPCidTranlate.Raya, "Buka surat", "Act2_1"), //ini harusnya surat
-        new QuestVariable(9, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
+        new QuestVariable(14, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
+        new QuestVariable(15, NPCidTranlate.Raya, "Buka surat", "Act2_1"), //ini harusnya surat
+        new QuestVariable(16, NPCidTranlate.Anisa, "Kembali ke anisa dan istirahat di pusat", "Act2_0"),
 
 
         // act3

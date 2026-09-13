@@ -1,7 +1,6 @@
+using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
-using Unity.VectorGraphics;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Yarn.Unity;
@@ -15,7 +14,7 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private TMP_Text teksObjektif;
     [SerializeField] private TMP_Text teksKotakNama;
     [SerializeField] private GameObject CatsAroundHouse;
-    
+    [SerializeField] private CanvasGroup SumurGroupIM;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -25,6 +24,10 @@ public class RayaInputManagement : MonoBehaviour
     private Vector2 moveInput;
     private Animator animator;
     [SerializeField] private DialogueRunner dialogRunner;
+    [SerializeField] private GameObject SumurTrigger;
+    [SerializeField] private GameObject CanvasSumurGroup;
+    [SerializeField] private InputActionReference pActionRef;
+    [SerializeField] private InputActionReference qActionRef;
     // [SerializeField] private DialogueRunner dialogRunner;    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -66,10 +69,13 @@ public class RayaInputManagement : MonoBehaviour
 
     }
 
-    private void BuatInvoke()
+    private IEnumerator Objektif()
     {
+        SceneControl.InstanceSceneControl.ShowObjektifDiperbarui();
+        Debug.Log("sampe siniqqqq");
+        yield return new WaitForSeconds(2f);
         SceneControl.InstanceSceneControl.HideObjektifDiperbarui();
-        
+        Debug.Log("sampe tutup");
     }
     public void ActManagement()
     {
@@ -77,12 +83,20 @@ public class RayaInputManagement : MonoBehaviour
 
         teksObjektif.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif;
         teksKotakNama.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString();
-        Invoke("BuatInvoke", 2f);
-        Debug.Log("di panggil");
+
+        StartCoroutine(Objektif());
     }
-    public void DialogSelesai()
+    public void DialogSelesai( bool actMaju = true )
     {
-        SceneControl.InstanceSceneControl.actNow +=1;
+        if (actMaju)
+        {
+            SceneControl.InstanceSceneControl.actNow +=1;
+        }
+        else
+        {
+            SceneControl.InstanceSceneControl.actNow -=1;
+        }
+        
         playerInput.enabled = true;
         UIObjektif.SetActive(true);
 
@@ -95,10 +109,20 @@ public class RayaInputManagement : MonoBehaviour
             case (3) :
                 SceneControl.InstanceSceneControl.Act3Kucing();
                 break;
+            case (8): 
+                SumurTrigger.SetActive(true);
+                break;
+            case (13):
+                SumurTrigger.SetActive(false);
+                CanvasSumurGroup.SetActive(false);
+                pActionRef.action.Disable();
+                qActionRef.action.Disable();
+                break;
         }
     }
     public void MulaiDialog()
     {
+        // SceneControl.InstanceSceneControl.HideObjektifDiperbarui();
         playerInput.enabled = false;
         UIObjektif.SetActive(false);
         SceneControl.InstanceSceneControl.HideKotakNama();
@@ -124,27 +148,24 @@ public class RayaInputManagement : MonoBehaviour
                 foreach (Collider2D hit in Physics2D.OverlapBoxAll(RayaColliderTrigger.bounds.center, RayaColliderTrigger.bounds.size, 0f))
                 {
 
-
                     if (hit.CompareTag("Hewani"))
                         {
                             Destroy(hit.gameObject);
+                            // SceneControl.InstanceSceneControl.ThisQuestNeedSecondObjective("Kucing yang di ambil: " + SceneControl.InstanceSceneControl.CatsTaken);
                             SceneControl.InstanceSceneControl.CatsTaken += 1;
-                            if (SceneControl.InstanceSceneControl.CatsTaken == 3)
-                                {
-                                    CatsAroundHouse.SetActive(true);
-                                    DialogSelesai(); 
+                            DialogSelesai(); 
+                            // if (SceneControl.InstanceSceneControl.CatsTaken == 3)
+                            //     {
+                            //         CatsAroundHouse.SetActive(true);
                                     
-                                }
-                            Debug.Log("udah berhasil di tambah 1 sekarang ada "+ SceneControl.InstanceSceneControl.CatsTaken);
-                            break;
-
-
-                            
+                                    
+                            //     }
+                            // Debug.Log("udah berhasil di tambah 1 sekarang ada "+ SceneControl.InstanceSceneControl.CatsTaken);
+                            break;                            
                         }
                 }
                 
             }
-
 
         }
 
@@ -179,4 +200,30 @@ public class RayaInputManagement : MonoBehaviour
             });
         
     }
+
+    public void PSumurInteraction(InputAction.CallbackContext context)
+    {
+        // p pressed
+        if (context.performed && SumurGroupIM.alpha > 0 && SceneControl.InstanceSceneControl.EmberTaken <= 5)
+        {
+            moveSpeed -= 0.5f;
+        //    SceneControl.InstanceSceneControl.EmberTaken +=1;
+            DialogSelesai();
+        }        
+    } 
+    // tambah variabel ember
+
+    public void QSumurInteraction(InputAction.CallbackContext context)
+    {
+        // q pressed
+        if (context.performed && SumurGroupIM.alpha > 0 && SceneControl.InstanceSceneControl.EmberTaken >= 0)
+        {
+           moveSpeed += 0.5f;
+           SceneControl.InstanceSceneControl.EmberTaken -=1;
+           DialogSelesai(false);
+        }        
+    }
+
+
+    // untuk post buat data baru, interact pake z aja
 }

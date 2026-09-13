@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,6 +15,8 @@ public class SceneControl : MonoBehaviour
     [SerializeField] private GameObject ParentCats;
     [SerializeField] private CanvasGroup KotakNamaCanvas;
     [SerializeField] private CanvasGroup ObjektifDiPerbarui;
+    [SerializeField] private GameObject SumurTrigger;
+    // [SerializeField] private TMP_Text ObjektifPerAct;
     
 
 
@@ -25,6 +28,7 @@ public class SceneControl : MonoBehaviour
 
     [Header("Variable")]
     public int CatsTaken;
+    public int EmberTaken = 0;
     // public string actSaatIni;
     // public string[] objektifAll;
 
@@ -37,6 +41,7 @@ public class SceneControl : MonoBehaviour
         // ObjektifDiPerbarui.gameObject.SetActive(false);
         HideKotakNama();
         ParentCats.SetActive(false);
+        SumurTrigger.SetActive(false);
         
     }
     // public void QuestDataControl(int idNPC, string objektif, string acting)
@@ -60,17 +65,26 @@ public class SceneControl : MonoBehaviour
         }
         InstanceSceneControl = this;
     }
+    private void OnDestroy()
+    {
+        if (InstanceSceneControl == this)
+        {
+            InstanceSceneControl = null;
+        }
+    }
 
     public void ShowObjektifDiperbarui()
     {
+        LeanTween.cancel(ObjektifDiPerbarui.gameObject);
         ObjektifDiPerbarui.alpha = 0f;
-        LeanTween.alphaCanvas(ObjektifDiPerbarui, 1f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.alphaCanvas(ObjektifDiPerbarui, 1f, 0.3f).setEase(LeanTweenType.easeInOutQuad);
     }
 
     public void HideObjektifDiperbarui()
     {
+        LeanTween.cancel(ObjektifDiPerbarui.gameObject);
         ObjektifDiPerbarui.alpha = 1f;
-        LeanTween.alphaCanvas(ObjektifDiPerbarui, 0f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.alphaCanvas(ObjektifDiPerbarui, 0f, 0.3f).setEase(LeanTweenType.easeInOutQuad);
     }
 
     public void ShowKotakNama()
@@ -109,9 +123,11 @@ public class SceneControl : MonoBehaviour
                 LayarHitam(false);
             });
         }
-
-
- 
     }
+
+    // public void ThisQuestNeedSecondObjective(String TulisanDiUi)
+    // {
+    //     ObjektifPerAct.text = TulisanDiUi;
+    // }
 
 }
