@@ -16,14 +16,12 @@ public class SceneControl : MonoBehaviour
     [SerializeField] private CanvasGroup KotakNamaCanvas;
     [SerializeField] private CanvasGroup ObjektifDiPerbarui;
     [SerializeField] private GameObject SumurTrigger;
+    [SerializeField] private TMP_Text GantiDayText;
+    // private CanvasGroup GantiDayCanvas;
     // [SerializeField] private TMP_Text ObjektifPerAct;
     
-
-
-    [Header("Cats")]
-    [SerializeField] private GameObject Gradle;
-    [SerializeField] private GameObject Musi;
-    [SerializeField] private GameObject Doker;
+    [Header("People")]
+    [SerializeField] private GameObject Raya;
 
 
     [Header("Variable")]
@@ -42,6 +40,7 @@ public class SceneControl : MonoBehaviour
         HideKotakNama();
         ParentCats.SetActive(false);
         SumurTrigger.SetActive(false);
+        // GantiDayCanvas = GantiDay.GetComponent<CanvasGroup>();
         
     }
     // public void QuestDataControl(int idNPC, string objektif, string acting)
@@ -125,9 +124,26 @@ public class SceneControl : MonoBehaviour
         }
     }
 
-    // public void ThisQuestNeedSecondObjective(String TulisanDiUi)
-    // {
-    //     ObjektifPerAct.text = TulisanDiUi;
-    // }
+    public IEnumerator GantiDayCorotine(string tulisanGanti)
+    {
+        yield return null;
+        LayarHitam(true).setOnComplete(() =>
+        {
+            GantiDayText.gameObject.SetActive(true);
+            GantiDayText.text = tulisanGanti;
+            Raya.transform.position = new Vector3(-66f, -10.5f, 0f);
+
+            StartCoroutine(TutupGantiDay());
+        });
+    }
+    
+    IEnumerator TutupGantiDay()
+    {
+        yield return new WaitForSeconds(5f);
+        GantiDayText.gameObject.SetActive(false);
+        LayarHitam(false);
+    }
+
+// 
 
 }

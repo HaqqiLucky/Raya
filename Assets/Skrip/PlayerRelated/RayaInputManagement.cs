@@ -15,6 +15,7 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private TMP_Text teksKotakNama;
     [SerializeField] private GameObject CatsAroundHouse;
     [SerializeField] private CanvasGroup SumurGroupIM;
+    [SerializeField] private TMP_Text GantiPeringatan;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -72,10 +73,10 @@ public class RayaInputManagement : MonoBehaviour
     private IEnumerator Objektif()
     {
         SceneControl.InstanceSceneControl.ShowObjektifDiperbarui();
-        Debug.Log("sampe siniqqqq");
+        // Debug.Log("sampe siniqqqq");
         yield return new WaitForSeconds(2f);
         SceneControl.InstanceSceneControl.HideObjektifDiperbarui();
-        Debug.Log("sampe tutup");
+        // Debug.Log("sampe tutup");
     }
     public void ActManagement()
     {
@@ -96,7 +97,7 @@ public class RayaInputManagement : MonoBehaviour
         {
             SceneControl.InstanceSceneControl.actNow -=1;
         }
-        
+        GantiPeringatan.text = "Objektif berhasil diperbarui";
         playerInput.enabled = true;
         UIObjektif.SetActive(true);
 
@@ -118,6 +119,10 @@ public class RayaInputManagement : MonoBehaviour
                 pActionRef.action.Disable();
                 qActionRef.action.Disable();
                 break;
+            case (16):
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
+                break;
+
         }
     }
     public void MulaiDialog()
@@ -226,4 +231,29 @@ public class RayaInputManagement : MonoBehaviour
 
 
     // untuk post buat data baru, interact pake z aja
+    public void ZMail(InputAction.CallbackContext context)
+    {
+        // z pressed
+        if (context.performed && !dialogRunner.IsDialogueRunning)
+        {
+            switch (SceneControl.InstanceSceneControl.actNow)
+            {
+                case (15) :
+                    _ = dialogRunner.StartDialogue("Act2_1");
+                    break;
+                
+
+                default :
+                    // Debug.Log("masuk def");
+                    GantiPeringatan.text = "Tidak ada surat yang ada saat ini";
+                    StartCoroutine(Objektif());
+                    break;
+
+            }
+
+            // dialogRunner.StartDialogue(QuestData.GetQuestDenganId(Sc));
+        }        
+    }
+
+
 }
