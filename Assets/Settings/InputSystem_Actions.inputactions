@@ -75,6 +75,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "Ngomong Sendiri",
+                    "type": "Button",
+                    "id": "0f0a137a-29be-4740-88f8-fb26e43826b5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -361,6 +371,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Buka Surat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca3be4ef-84e4-4aaa-9917-2ccacb3b8ae1",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Ngomong Sendiri",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

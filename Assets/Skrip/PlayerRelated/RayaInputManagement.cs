@@ -122,6 +122,10 @@ public class RayaInputManagement : MonoBehaviour
             case (16):
                 StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
                 break;
+            // ini ganti
+            case (26):
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
+                break;
 
         }
     }
@@ -241,6 +245,10 @@ public class RayaInputManagement : MonoBehaviour
                 case (15) :
                     _ = dialogRunner.StartDialogue("Act2_1");
                     break;
+
+                case (24) :
+                    _ = dialogRunner.StartDialogue("Act4_2");
+                    break;
                 
 
                 default :
@@ -255,5 +263,28 @@ public class RayaInputManagement : MonoBehaviour
         }        
     }
 
+    public void YNgomongSendiri (InputAction.CallbackContext context)
+    {
+        // z pressed
+        if (context.performed && !dialogRunner.IsDialogueRunning)
+        {
+            switch (SceneControl.InstanceSceneControl.actNow)
+            {
+                case (22) :
+                    _ = dialogRunner.StartDialogue("Act4_0");
+                    break;
+                
+
+                default :
+                    // Debug.Log("masuk def");
+                    GantiPeringatan.text = "Tidak ada yang perlu di diskusikan saat ini";
+                    StartCoroutine(Objektif());
+                    break;
+
+            }
+
+            // dialogRunner.StartDialogue(QuestData.GetQuestDenganId(Sc));
+        }        
+    }
 
 }

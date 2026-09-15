@@ -74,24 +74,24 @@ public class QuestData
         new QuestVariable(16, NPCidTranlate.Anisa, "Ambil tugas dari anisa", "Act3_0"),
         new QuestVariable(17, NPCidTranlate.Jainah, "Cari orang dengan nama Jainah", "Act3_1"),
         new QuestVariable(18, NPCidTranlate.Raka, "Cari orang dengan nama Raka", "Act3_2"),
-        new QuestVariable(19, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_3"), // 1/4 jalan
-        new QuestVariable(20, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_4"), // 2/4 jalan
-        new QuestVariable(21, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_5"), // 3/4 jalan
+        new QuestVariable(19, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_3"), // 1/3 jalan
+        new QuestVariable(20, NPCidTranlate.Raka, "Ikuti Pak Raka", "Act3_4"), // 2/3 jalan
+        new QuestVariable(21, NPCidTranlate.Raka, "Bicara dengan Pak Raka", "Act3_5"), // 3/3 jalan
 
         // act4 
-        new QuestVariable(15, NPCidTranlate.Raya, "....", "Act4_0"),
-        new QuestVariable(16, NPCidTranlate.Anisa, "Balik ke pusat dan bicara kepada anisa", "Act4_1"),
-        new QuestVariable(17, NPCidTranlate.Raya, "Baca surat", "Act4_2"),
-        new QuestVariable(18, NPCidTranlate.Anisa, "Tanyakan perihal surat kepada anisa", "Act4_3"),
+        new QuestVariable(22, NPCidTranlate.Raya, "Bicara dengan dirimu sendiri sebelum pergi ke pusat (Tekan Y)", "Act4_0"),
+        new QuestVariable(23, NPCidTranlate.Anisa, "Balik ke pusat dan bicara kepada anisa", "Act4_1"),
+        new QuestVariable(24, NPCidTranlate.Mail, "Baca surat (Tekan Z)", "Act4_2"),
+        new QuestVariable(25, NPCidTranlate.Anisa, "Tanyakan perihal surat kepada anisa", "Act4_3"),
 
         // act 5
-        new QuestVariable(19, NPCidTranlate.Raya, "Cari mood", "Act5_0"),
-        new QuestVariable(20, NPCidTranlate.Anisa, "Bicara pada anisa", "Act5_1"),
-        new QuestVariable(21, NPCidTranlate.Nia, "Cari orang dengan nama Nia", "Act5_2"),
-        new QuestVariable(22, NPCidTranlate.Nia, "Selesaikan tugas mu dan bicara pada bu nia", "Act5_3"),
-        new QuestVariable(23, NPCidTranlate.Raya, "Cari bocil di sekitar hutan", "Act5_4"),
-        new QuestVariable(24, NPCidTranlate.Haqi, "Cari bocil di sekitar hutan", "Act5_5"),
-        new QuestVariable(25, NPCidTranlate.Haqi, "Menangkan pertandingan", "Act5_6"),
+        new QuestVariable(26, NPCidTranlate.Raya, "Cari mood", "Act5_0"),
+        new QuestVariable(27, NPCidTranlate.Anisa, "Bicara pada anisa", "Act5_1"),
+        new QuestVariable(28, NPCidTranlate.Nia, "Cari orang dengan nama Nia", "Act5_2"),
+        new QuestVariable(29, NPCidTranlate.Nia, "Selesaikan tugas mu dan bicara pada bu nia", "Act5_3"),
+        new QuestVariable(30, NPCidTranlate.Raya, "Cari bocil di sekitar hutan", "Act5_4"),
+        new QuestVariable(31, NPCidTranlate.Haqi, "Cari bocil di sekitar hutan", "Act5_5"),
+        new QuestVariable(32, NPCidTranlate.Haqi, "Menangkan pertandingan", "Act5_6"),
 
         //act 6
         new QuestVariable(26, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act6_0"),
