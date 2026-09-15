@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SceneControl : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class SceneControl : MonoBehaviour
     
     [Header("People")]
     [SerializeField] private GameObject Raya;
+    [SerializeField] private PlayerInput RayaPlayerInput;
 
 
     [Header("Variable")]
@@ -127,6 +129,7 @@ public class SceneControl : MonoBehaviour
     public IEnumerator GantiDayCorotine(string tulisanGanti)
     {
         yield return null;
+        RayaPlayerInput.enabled = false;
         LayarHitam(true).setOnComplete(() =>
         {
             GantiDayText.gameObject.SetActive(true);
@@ -142,6 +145,7 @@ public class SceneControl : MonoBehaviour
         yield return new WaitForSeconds(5f);
         GantiDayText.gameObject.SetActive(false);
         LayarHitam(false);
+        RayaPlayerInput.enabled = true;
     }
 
 // 

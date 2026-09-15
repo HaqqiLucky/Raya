@@ -273,6 +273,9 @@ public class RayaInputManagement : MonoBehaviour
                 case (22) :
                     _ = dialogRunner.StartDialogue("Act4_0");
                     break;
+                case (26) :
+                    _ = dialogRunner.StartDialogue("Act5_0");
+                    break;
                 
 
                 default :

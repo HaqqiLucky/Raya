@@ -85,7 +85,7 @@ public class QuestData
         new QuestVariable(25, NPCidTranlate.Anisa, "Tanyakan perihal surat kepada anisa", "Act4_3"),
 
         // act 5
-        new QuestVariable(26, NPCidTranlate.Raya, "Cari mood", "Act5_0"),
+        new QuestVariable(26, NPCidTranlate.Raya, "Bicara pada dirimu sendiri (Tekan Y)", "Act5_0"),
         new QuestVariable(27, NPCidTranlate.Anisa, "Bicara pada anisa", "Act5_1"),
         new QuestVariable(28, NPCidTranlate.Nia, "Cari orang dengan nama Nia", "Act5_2"),
         new QuestVariable(29, NPCidTranlate.Nia, "Selesaikan tugas mu dan bicara pada bu nia", "Act5_3"),
