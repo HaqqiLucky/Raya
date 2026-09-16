@@ -20,7 +20,8 @@ public enum NPCidTranlate
     // tidak npc
     Ambil = 1,
     Sumoar = 2,
-    Mail = 3
+    Mail = 3,
+    Lahan = 4
 
 }
 [Serializable]
@@ -88,10 +89,30 @@ public class QuestData
         new QuestVariable(26, NPCidTranlate.Raya, "Bicara pada dirimu sendiri (Tekan Y)", "Act5_0"),
         new QuestVariable(27, NPCidTranlate.Anisa, "Bicara pada anisa", "Act5_1"),
         new QuestVariable(28, NPCidTranlate.Nia, "Cari orang dengan nama Nia", "Act5_2"),
-        new QuestVariable(29, NPCidTranlate.Nia, "Selesaikan tugas mu dan bicara pada bu nia", "Act5_3"),
-        new QuestVariable(30, NPCidTranlate.Raya, "Cari bocil di sekitar hutan", "Act5_4"),
-        new QuestVariable(31, NPCidTranlate.Haqi, "Cari bocil di sekitar hutan", "Act5_5"),
-        new QuestVariable(32, NPCidTranlate.Haqi, "Menangkan pertandingan", "Act5_6"),
+        new QuestVariable(29, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (0/10)", "Act5_2"),
+        new QuestVariable(30, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (1/10)", "Act5_2"),
+        new QuestVariable(31, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (2/10)", "Act5_2"),
+        new QuestVariable(32, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (3/10)", "Act5_2"),
+        new QuestVariable(33, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (4/10)", "Act5_2"),
+        new QuestVariable(34, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (5/10)", "Act5_2"),
+        new QuestVariable(35, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (6/10)", "Act5_2"),
+        new QuestVariable(36, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (7/10)", "Act5_2"),
+        new QuestVariable(37, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (8/10)", "Act5_2"),
+        new QuestVariable(38, NPCidTranlate.Sumoar, "Ambil air dari sumur bagian barat (9/10)", "Act5_2"),
+        new QuestVariable(39, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (10/10)", "Act5_2"),
+        new QuestVariable(40, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (9/10)", "Act5_2"),
+        new QuestVariable(41, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (8/10)", "Act5_2"),
+        new QuestVariable(42, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (7/10)", "Act5_2"),
+        new QuestVariable(43, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (6/10)", "Act5_2"),
+        new QuestVariable(44, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (5/10)", "Act5_2"),
+        new QuestVariable(45, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (4/10)", "Act5_2"),
+        new QuestVariable(46, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (3/10)", "Act5_2"),
+        new QuestVariable(47, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (2/10)", "Act5_2"),
+        new QuestVariable(48, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (1/10)", "Act5_2"),
+        new QuestVariable(49, NPCidTranlate.Nia, "Bicara pada bu nia", "Act5_3"),
+        new QuestVariable(50, NPCidTranlate.Raya, "Cari bocil di sekitar hutan", "Act5_4"),
+        new QuestVariable(51, NPCidTranlate.Haqi, "Cari bocil di sekitar hutan", "Act5_5"),
+        new QuestVariable(52, NPCidTranlate.Haqi, "Menangkan pertandingan", "Act5_6"),
 
         //act 6
         new QuestVariable(26, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act6_0"),

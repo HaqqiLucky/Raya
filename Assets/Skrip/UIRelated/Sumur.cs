@@ -21,10 +21,10 @@ public class Sumur : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") & SceneControl.InstanceSceneControl.actNow >= 8 && SceneControl.InstanceSceneControl.actNow < 13)
+        if (collision.CompareTag("Player"))
         {
 
-            Debug.Log("usah sampe sini masuk trigger sumur");
+            // Debug.Log("usah sampe sini masuk trigger sumur");
             SumurGroup.alpha = 0f;
             LeanTween.alphaCanvas(SumurGroup, 1f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
         }
@@ -44,9 +44,10 @@ public class Sumur : MonoBehaviour
     //     // }
     // }
 
+// & SceneControl.InstanceSceneControl.actNow >= 8 && SceneControl.InstanceSceneControl.actNow < 13 || SceneControl.InstanceSceneControl.actNow >= 8
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") & SceneControl.InstanceSceneControl.actNow >= 8 && SceneControl.InstanceSceneControl.actNow < 13)
+        if (collision.CompareTag("Player") ) 
         {
             // Debug.Log("usah sampe sini exit trigger sumur");
             // JagainBiarGaErorSumur();

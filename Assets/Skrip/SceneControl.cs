@@ -29,6 +29,7 @@ public class SceneControl : MonoBehaviour
     [Header("Variable")]
     public int CatsTaken;
     public int EmberTaken = 0;
+    public int WaterTakenForLahan = 0;
     // public string actSaatIni;
     // public string[] objektifAll;
 
@@ -142,7 +143,7 @@ public class SceneControl : MonoBehaviour
     
     IEnumerator TutupGantiDay()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
         GantiDayText.gameObject.SetActive(false);
         LayarHitam(false);
         RayaPlayerInput.enabled = true;

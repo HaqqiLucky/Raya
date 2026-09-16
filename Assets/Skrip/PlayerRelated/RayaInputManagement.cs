@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using Unity.Cinemachine;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Yarn.Unity;
@@ -16,6 +17,7 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private GameObject CatsAroundHouse;
     [SerializeField] private CanvasGroup SumurGroupIM;
     [SerializeField] private TMP_Text GantiPeringatan;
+    [SerializeField] private CanvasGroup LahanGroup;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -29,6 +31,7 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private GameObject CanvasSumurGroup;
     [SerializeField] private InputActionReference pActionRef;
     [SerializeField] private InputActionReference qActionRef;
+    [SerializeField] private InputActionReference bActionRef;
     // [SerializeField] private DialogueRunner dialogRunner;    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -111,13 +114,10 @@ public class RayaInputManagement : MonoBehaviour
                 SceneControl.InstanceSceneControl.Act3Kucing();
                 break;
             case (8): 
-                SumurTrigger.SetActive(true);
+                sumurOn();
                 break;
             case (13):
-                SumurTrigger.SetActive(false);
-                CanvasSumurGroup.SetActive(false);
-                pActionRef.action.Disable();
-                qActionRef.action.Disable();
+                sumurOff();
                 break;
             case (16):
                 StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
@@ -126,9 +126,38 @@ public class RayaInputManagement : MonoBehaviour
             case (26):
                 StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
                 break;
+            case (29):
+                sumurOn();
+                break;
+            case (39):
+                sumurOff();
+                LahanOn();
+                break;
+            case (49):
+                LahanOff();
+                break;
 
         }
     }
+
+    private void sumurOff()
+    {
+        SumurTrigger.SetActive(false);
+        CanvasSumurGroup.SetActive(false);
+        pActionRef.action.Disable();
+        qActionRef.action.Disable();
+        moveSpeed = 5;
+    }
+
+    private void sumurOn()
+    {
+        SumurTrigger.SetActive(true);
+        CanvasSumurGroup.SetActive(true);
+        pActionRef.action.Enable();
+        qActionRef.action.Enable();
+        moveSpeed = 5;
+    }
+
     public void MulaiDialog()
     {
         // SceneControl.InstanceSceneControl.HideObjektifDiperbarui();
@@ -215,7 +244,7 @@ public class RayaInputManagement : MonoBehaviour
         // p pressed
         if (context.performed && SumurGroupIM.alpha > 0 && SceneControl.InstanceSceneControl.EmberTaken <= 5)
         {
-            moveSpeed -= 0.5f;
+            moveSpeed -= 0.2f;
         //    SceneControl.InstanceSceneControl.EmberTaken +=1;
             DialogSelesai();
         }        
@@ -289,5 +318,52 @@ public class RayaInputManagement : MonoBehaviour
             // dialogRunner.StartDialogue(QuestData.GetQuestDenganId(Sc));
         }        
     }
+
+
+    private void LahanOff()
+    {
+        // SumurTrigger.SetActive(false);
+        LahanGroup.gameObject.SetActive(false);
+        bActionRef.action.Disable();
+        // qActionRef.action.Disable();
+        moveSpeed = 5;
+    }
+
+    private void LahanOn()
+    {
+        // SumurTrigger.SetActive(true);
+        LahanGroup.gameObject.SetActive(true);
+        bActionRef.action.Enable();
+        moveSpeed = 5;
+    }
+
+    public void BLahanInteraction(InputAction.CallbackContext context)
+    {
+        // Jika tombol B ditekan
+        if (context.performed)
+        {
+            // Cek semua collider yang bersentuhan dengan Trigger Player
+            Collider2D[] hitColliders = Physics2D.OverlapBoxAll(RayaColliderTrigger.bounds.center, RayaColliderTrigger.bounds.size, 0f);
+
+            foreach (Collider2D hit in hitColliders)
+            {
+                // Ambil script Lahan dari object yang terkena trigger
+                Lahan lahan = hit.GetComponent<Lahan>();
+
+                // Jika object tersebut adalah Lahan DAN belum disiram
+                if (lahan != null && !lahan.udahDisiram)
+                {
+                    // 1. Panggil fungsi di Script Lahan untuk mengubah bool-nya
+                    lahan.SiramLahan();
+
+                    // 2. Tambahkan progress/data di Player
+                    SceneControl.InstanceSceneControl.WaterTakenForLahan += 1;
+                    DialogSelesai();
+                    
+                    break; // Keluar dari loop setelah ketemu 1 lahan
+                }
+            }
+        }        
+    }       
 
 }

@@ -85,6 +85,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "Siram Buah Bit",
+                    "type": "Button",
+                    "id": "7135dd90-e5db-4c4d-902b-10c1626ee603",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -382,6 +392,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Ngomong Sendiri",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8376fae-f573-450a-a046-68e050850542",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Siram Buah Bit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
