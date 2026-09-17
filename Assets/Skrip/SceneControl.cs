@@ -23,6 +23,8 @@ public class SceneControl : MonoBehaviour
     
     [Header("People")]
     [SerializeField] private GameObject Raya;
+    [SerializeField] private GameObject Liam;
+    [SerializeField] private GameObject Haqi;
     [SerializeField] private PlayerInput RayaPlayerInput;
 
 
@@ -127,6 +129,46 @@ public class SceneControl : MonoBehaviour
         }
     }
 
+
+    public IEnumerator Act7Liam1()
+    {
+        yield return null;
+        RayaPlayerInput.enabled = false;
+        LayarHitam(true).setOnComplete(() =>
+        {
+            Liam.transform.localPosition = new Vector3(-6.11592102f,17.0515289f,0);
+            
+
+            StartCoroutine(TutupGantiDay(3));
+        });
+    }
+
+    public IEnumerator Act7Liam2()
+    {
+        yield return null;
+        RayaPlayerInput.enabled = false;
+        LayarHitam(true).setOnComplete(() =>
+        {
+            Liam.transform.localPosition = new Vector3(-7.11592102f,-24.9484711f,0);
+            
+
+            StartCoroutine(TutupGantiDay(3));
+        });
+    }
+
+    public IEnumerator Act5Haqi()
+    {
+        yield return null;
+        RayaPlayerInput.enabled = false;
+        LayarHitam(true).setOnComplete(() =>
+        {
+            // Liam.transform.position = new Vector3(10.88408f, -3.94847f, 0f);
+            Haqi.SetActive(true);
+
+            StartCoroutine(TutupGantiDay(3));
+        });
+    }
+
     public IEnumerator GantiDayCorotine(string tulisanGanti)
     {
         yield return null;
@@ -137,13 +179,13 @@ public class SceneControl : MonoBehaviour
             GantiDayText.text = tulisanGanti;
             Raya.transform.position = new Vector3(-66f, -10.5f, 0f);
 
-            StartCoroutine(TutupGantiDay());
+            StartCoroutine(TutupGantiDay(7));
         });
     }
     
-    IEnumerator TutupGantiDay()
+    IEnumerator TutupGantiDay(float time)
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(time);
         GantiDayText.gameObject.SetActive(false);
         LayarHitam(false);
         RayaPlayerInput.enabled = true;

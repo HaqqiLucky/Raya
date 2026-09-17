@@ -20,6 +20,7 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private CanvasGroup LahanGroup;
     [SerializeField] private CanvasGroup PatungGroup;
     [SerializeField] private GameObject Haqi;
+    [SerializeField] private GameObject Liam;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -123,11 +124,11 @@ public class RayaInputManagement : MonoBehaviour
                 sumurOff();
                 break;
             case (16):
-                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari ke-2"));
                 break;
             // ini ganti
             case (26):
-                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari ke-3"));
                 break;
             case (29):
                 sumurOn();
@@ -139,6 +140,12 @@ public class RayaInputManagement : MonoBehaviour
             case (49):
                 LahanOff();
                 break;
+            case (51):
+                SceneControl.InstanceSceneControl.Act5Haqi();
+                break;
+            case (52):
+                Haqi.SetActive(false);
+                break;
             case (56):
                 CariChestOn();
                 break;
@@ -146,9 +153,15 @@ public class RayaInputManagement : MonoBehaviour
                 CariChestOff();
                 break;
             case (65):
-                Haqi.SetActive(false);
-                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
-                break;  
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari ke-4"));
+                Liam.SetActive(true);
+                break;
+            case (67) :
+                StartCoroutine(SceneControl.InstanceSceneControl.Act7Liam1());
+                break;
+            case (68) :
+                StartCoroutine(SceneControl.InstanceSceneControl.Act7Liam2());
+                break;
 
         }
     }
