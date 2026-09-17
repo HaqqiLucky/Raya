@@ -29,11 +29,25 @@ public class Lahan : MonoBehaviour
     {
         if(collision.CompareTag("Player") && SceneControl.InstanceSceneControl.actNow >= 39 && SceneControl.InstanceSceneControl.actNow <= 49 && gameObject.transform.parent.name.Contains("Beefroot Bu Nia") && !udahDisiram)
         {
-            Debug.Log("yyyy");
+            // Debug.Log("yyyy");
             LahanGroup.alpha = 0f;
             LeanTween.alphaCanvas(LahanGroup, 1f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
-            udahDisiram = true;
+            // udahDisiram = true;
+        } 
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player") && udahDisiram == true)
+        {
+            KeluarHus();
         }
+    }
+    private void KeluarHus()
+    {
+        LahanGroup.alpha = 1f;
+        LeanTween.alphaCanvas(LahanGroup, 0f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
     }
 
 
@@ -41,11 +55,9 @@ public class Lahan : MonoBehaviour
     {
         if(collision.CompareTag("Player") && LahanGroup.alpha > 0)
         {
-            LahanGroup.alpha = 1f;
-            LeanTween.alphaCanvas(LahanGroup, 1f, 0.5f).setEase(LeanTweenType.easeInOutQuad);
+
+            KeluarHus();
         }
-
-
     }
 
     public void SiramLahan()

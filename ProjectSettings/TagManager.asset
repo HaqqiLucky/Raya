@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CameraUp
   - Hewani
+  - Chest
   layers:
   - Default
   - TransparentFX

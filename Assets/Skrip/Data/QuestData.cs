@@ -21,7 +21,9 @@ public enum NPCidTranlate
     Ambil = 1,
     Sumoar = 2,
     Mail = 3,
-    Lahan = 4
+    Lahan = 4,
+    Chest = 5,
+    Patung = 6
 
 }
 [Serializable]
@@ -110,24 +112,32 @@ public class QuestData
         new QuestVariable(47, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (2/10)", "Act5_2"),
         new QuestVariable(48, NPCidTranlate.Lahan, "Siram 10 lahan bu nia yang berada di samping rumah bu indah dengan air (1/10)", "Act5_2"),
         new QuestVariable(49, NPCidTranlate.Nia, "Bicara pada bu nia", "Act5_3"),
-        new QuestVariable(50, NPCidTranlate.Raya, "Cari bocil di sekitar hutan", "Act5_4"),
-        new QuestVariable(51, NPCidTranlate.Haqi, "Cari bocil di sekitar hutan", "Act5_5"),
+        new QuestVariable(50, NPCidTranlate.Raya, "Mantapkan dirimu sebelum bertemu bocil (Tekan Y)", "Act5_4"),
+        new QuestVariable(51, NPCidTranlate.Haqi, "Cari bocil di sekitar hutan sebelah barat ", "Act5_5"),
         new QuestVariable(52, NPCidTranlate.Haqi, "Menangkan pertandingan", "Act5_6"),
 
         //act 6
-        new QuestVariable(26, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act6_0"),
-        new QuestVariable(27, NPCidTranlate.Raya, "Cari bu jainah dan tanyakan tentang patung", "Act6_1"),
-        new QuestVariable(28, NPCidTranlate.Raya, "Pergi ke depan patung dewi takdir", "Act6_2"),
-        new QuestVariable(29, NPCidTranlate.Raya, "Cari persembahan untuk diberikan", "Act6_3"), // kasi petunjuk gmn nyari chest atau gambar aja
+        new QuestVariable(53, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act6_0"),
+        new QuestVariable(54, NPCidTranlate.Jainah, "Cari bu jainah dan tanyakan tentang patung", "Act6_1"),
+        new QuestVariable(55, NPCidTranlate.Raya, "Pergi ke depan patung dewi takdir (Tekan Y) ", "Act6_2"),
+        new QuestVariable(56, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (0/7)", "Act6_2"), // kasi petunjuk gmn nyari chest atau gambar aja
+        new QuestVariable(57, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (1/7)", "Act6_2"),
+        new QuestVariable(58, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (2/7)", "Act6_2"),
+        new QuestVariable(59, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (3/7)", "Act6_2"),
+        new QuestVariable(60, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (4/7)", "Act6_2"),
+        new QuestVariable(61, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (5/7)", "Act6_2"),
+        new QuestVariable(62, NPCidTranlate.Chest, "Cari persembahan untuk diberikan (6/7)", "Act6_2"),
+        new QuestVariable(63, NPCidTranlate.Patung, "Berikan ke tujuh persembahan yang kau dapat kepada patung dewi takdir dengan berdoa", "Act6_2"), 
+        new QuestVariable(64, NPCidTranlate.Raya, "Lihat keadaan sekitar dan bicara pada dirimu sendiri (Tekan Y)", "Act6_3"),
 
         // act 7
-        new QuestVariable(30, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act7_0"),
-        new QuestVariable(31, NPCidTranlate.Liam, "Cari bocil di sekitar hutan", "Act7_1"),
-        new QuestVariable(32, NPCidTranlate.Liam, "Cari Liam", "Act7_2"),
-        new QuestVariable(33, NPCidTranlate.Liam, "Cari Liam lagi", "Act7_3"),
-        new QuestVariable(34, NPCidTranlate.Raya, "Cari bocil di tengah hutan", "Act7_4"),
-        new QuestVariable(35, NPCidTranlate.Raya, "Dekati bocil cewe", "Act7_5"),
-        new QuestVariable(36, NPCidTranlate.Sakinah, "Ajak bicara si bocil", "Act7_6"),
+        new QuestVariable(65, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act7_0"),
+        new QuestVariable(66, NPCidTranlate.Liam, "Cari bocil di sekitar hutan", "Act7_1"),
+        new QuestVariable(67, NPCidTranlate.Liam, "Cari Liam", "Act7_2"),
+        new QuestVariable(68, NPCidTranlate.Liam, "Cari Liam lagi", "Act7_3"),
+        new QuestVariable(69, NPCidTranlate.Raya, "Cari bocil di tengah hutan", "Act7_4"),
+        new QuestVariable(70, NPCidTranlate.Raya, "Dekati bocil cewe", "Act7_5"),
+        new QuestVariable(71, NPCidTranlate.Sakinah, "Ajak bicara si bocil", "Act7_6"),
 
         // act 8
         new QuestVariable(37, NPCidTranlate.Raya, "Kembali ke pusat dan kabari anisa", "Act8_0"),

@@ -95,6 +95,26 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "Buka Chest",
+                    "type": "Button",
+                    "id": "faf5ca61-0eb4-45b3-8789-2ca394ccee3d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Patung",
+                    "type": "Button",
+                    "id": "84f5ed28-3b49-4441-acd9-03ff8c4a1bae",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -403,6 +423,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Siram Buah Bit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97c3e6bc-81c6-44c0-8b0b-23111e759451",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Buka Chest",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ce3c7fb-8046-4236-bfda-28cdc9f91ea4",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Patung",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

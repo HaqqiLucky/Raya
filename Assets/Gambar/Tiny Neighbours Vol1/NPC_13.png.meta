@@ -319,7 +319,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -333,7 +333,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -357,7 +357,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -387,10 +387,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 64
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -407,12 +407,12 @@ TextureImporter:
       name: NPC_13_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 175
-        width: 14
-        height: 17
+        x: 16
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -429,12 +429,12 @@ TextureImporter:
       name: NPC_13_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 175
-        width: 14
-        height: 17
+        x: 32
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -451,12 +451,12 @@ TextureImporter:
       name: NPC_13_3
       rect:
         serializedVersion: 2
-        x: 49
-        y: 175
-        width: 14
-        height: 17
+        x: 48
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -475,10 +475,10 @@ TextureImporter:
         serializedVersion: 2
         x: 64
         y: 192
-        width: 64
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -495,12 +495,12 @@ TextureImporter:
       name: NPC_13_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 175
-        width: 14
-        height: 17
+        x: 80
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -517,12 +517,12 @@ TextureImporter:
       name: NPC_13_6
       rect:
         serializedVersion: 2
-        x: 97
-        y: 175
-        width: 14
-        height: 17
+        x: 96
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -539,12 +539,12 @@ TextureImporter:
       name: NPC_13_7
       rect:
         serializedVersion: 2
-        x: 2
-        y: 159
-        width: 13
-        height: 17
+        x: 112
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -561,12 +561,12 @@ TextureImporter:
       name: NPC_13_8
       rect:
         serializedVersion: 2
-        x: 17
-        y: 175
-        width: 14
+        x: 0
+        y: 176
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -583,12 +583,12 @@ TextureImporter:
       name: NPC_13_9
       rect:
         serializedVersion: 2
-        x: 18
-        y: 159
-        width: 13
+        x: 16
+        y: 176
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -605,12 +605,12 @@ TextureImporter:
       name: NPC_13_10
       rect:
         serializedVersion: 2
-        x: 33
-        y: 143
-        width: 14
-        height: 33
+        x: 32
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -627,12 +627,12 @@ TextureImporter:
       name: NPC_13_11
       rect:
         serializedVersion: 2
-        x: 50
-        y: 159
-        width: 13
-        height: 17
+        x: 48
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -649,12 +649,12 @@ TextureImporter:
       name: NPC_13_12
       rect:
         serializedVersion: 2
-        x: 66
-        y: 159
-        width: 13
-        height: 17
+        x: 64
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -671,12 +671,12 @@ TextureImporter:
       name: NPC_13_13
       rect:
         serializedVersion: 2
-        x: 81
-        y: 175
-        width: 14
+        x: 80
+        y: 176
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -693,12 +693,12 @@ TextureImporter:
       name: NPC_13_14
       rect:
         serializedVersion: 2
-        x: 82
-        y: 159
-        width: 13
+        x: 96
+        y: 176
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -715,12 +715,12 @@ TextureImporter:
       name: NPC_13_15
       rect:
         serializedVersion: 2
-        x: 98
-        y: 159
-        width: 13
-        height: 17
+        x: 112
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -737,12 +737,12 @@ TextureImporter:
       name: NPC_13_16
       rect:
         serializedVersion: 2
-        x: 113
-        y: 175
-        width: 14
+        x: 0
+        y: 160
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -759,12 +759,12 @@ TextureImporter:
       name: NPC_13_17
       rect:
         serializedVersion: 2
-        x: 114
-        y: 159
-        width: 13
+        x: 16
+        y: 160
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -781,12 +781,12 @@ TextureImporter:
       name: NPC_13_18
       rect:
         serializedVersion: 2
-        x: 1
-        y: 143
-        width: 14
-        height: 18
+        x: 32
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -803,12 +803,12 @@ TextureImporter:
       name: NPC_13_19
       rect:
         serializedVersion: 2
-        x: 1
-        y: 127
-        width: 13
-        height: 17
+        x: 48
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -825,12 +825,12 @@ TextureImporter:
       name: NPC_13_20
       rect:
         serializedVersion: 2
-        x: 17
-        y: 143
-        width: 14
-        height: 17
+        x: 64
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -847,12 +847,12 @@ TextureImporter:
       name: NPC_13_21
       rect:
         serializedVersion: 2
-        x: 17
-        y: 127
-        width: 13
+        x: 80
+        y: 160
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -869,12 +869,12 @@ TextureImporter:
       name: NPC_13_22
       rect:
         serializedVersion: 2
-        x: 33
-        y: 127
-        width: 13
-        height: 17
+        x: 96
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -891,12 +891,12 @@ TextureImporter:
       name: NPC_13_23
       rect:
         serializedVersion: 2
-        x: 49
-        y: 143
-        width: 14
-        height: 18
+        x: 112
+        y: 160
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -913,12 +913,12 @@ TextureImporter:
       name: NPC_13_24
       rect:
         serializedVersion: 2
-        x: 49
-        y: 127
-        width: 13
-        height: 17
+        x: 0
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -935,12 +935,12 @@ TextureImporter:
       name: NPC_13_25
       rect:
         serializedVersion: 2
-        x: 65
-        y: 143
-        width: 14
-        height: 18
+        x: 16
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -957,12 +957,12 @@ TextureImporter:
       name: NPC_13_26
       rect:
         serializedVersion: 2
-        x: 65
-        y: 127
-        width: 13
-        height: 17
+        x: 32
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -979,12 +979,12 @@ TextureImporter:
       name: NPC_13_27
       rect:
         serializedVersion: 2
-        x: 81
-        y: 143
-        width: 14
-        height: 17
+        x: 48
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1001,12 +1001,12 @@ TextureImporter:
       name: NPC_13_28
       rect:
         serializedVersion: 2
-        x: 81
-        y: 127
-        width: 13
+        x: 64
+        y: 144
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1023,12 +1023,12 @@ TextureImporter:
       name: NPC_13_29
       rect:
         serializedVersion: 2
-        x: 97
-        y: 143
-        width: 14
-        height: 18
+        x: 80
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1045,12 +1045,12 @@ TextureImporter:
       name: NPC_13_30
       rect:
         serializedVersion: 2
-        x: 97
-        y: 127
-        width: 13
-        height: 17
+        x: 96
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1067,12 +1067,12 @@ TextureImporter:
       name: NPC_13_31
       rect:
         serializedVersion: 2
-        x: 113
-        y: 143
-        width: 14
-        height: 17
+        x: 112
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1089,12 +1089,12 @@ TextureImporter:
       name: NPC_13_32
       rect:
         serializedVersion: 2
-        x: 113
-        y: 127
-        width: 13
+        x: 0
+        y: 128
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1111,12 +1111,12 @@ TextureImporter:
       name: NPC_13_33
       rect:
         serializedVersion: 2
-        x: 1
-        y: 111
-        width: 14
-        height: 17
+        x: 16
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1133,12 +1133,12 @@ TextureImporter:
       name: NPC_13_34
       rect:
         serializedVersion: 2
-        x: 2
-        y: 95
-        width: 13
-        height: 17
+        x: 32
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1155,12 +1155,12 @@ TextureImporter:
       name: NPC_13_35
       rect:
         serializedVersion: 2
-        x: 17
-        y: 111
-        width: 14
+        x: 48
+        y: 128
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1177,12 +1177,12 @@ TextureImporter:
       name: NPC_13_36
       rect:
         serializedVersion: 2
-        x: 18
-        y: 95
-        width: 13
+        x: 64
+        y: 128
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1199,12 +1199,12 @@ TextureImporter:
       name: NPC_13_37
       rect:
         serializedVersion: 2
-        x: 33
-        y: 111
-        width: 14
-        height: 17
+        x: 80
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1221,12 +1221,12 @@ TextureImporter:
       name: NPC_13_38
       rect:
         serializedVersion: 2
-        x: 33
-        y: 79
-        width: 14
-        height: 33
+        x: 96
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1243,12 +1243,12 @@ TextureImporter:
       name: NPC_13_39
       rect:
         serializedVersion: 2
-        x: 49
-        y: 111
-        width: 14
-        height: 17
+        x: 112
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1265,12 +1265,12 @@ TextureImporter:
       name: NPC_13_40
       rect:
         serializedVersion: 2
-        x: 50
-        y: 95
-        width: 13
-        height: 17
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1287,12 +1287,12 @@ TextureImporter:
       name: NPC_13_41
       rect:
         serializedVersion: 2
-        x: 65
-        y: 111
-        width: 14
-        height: 17
+        x: 16
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1309,12 +1309,12 @@ TextureImporter:
       name: NPC_13_42
       rect:
         serializedVersion: 2
-        x: 66
-        y: 95
-        width: 13
-        height: 17
+        x: 32
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1331,12 +1331,12 @@ TextureImporter:
       name: NPC_13_43
       rect:
         serializedVersion: 2
-        x: 81
-        y: 111
-        width: 14
+        x: 48
+        y: 112
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1353,12 +1353,12 @@ TextureImporter:
       name: NPC_13_44
       rect:
         serializedVersion: 2
-        x: 82
-        y: 95
-        width: 13
+        x: 64
+        y: 112
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1375,12 +1375,12 @@ TextureImporter:
       name: NPC_13_45
       rect:
         serializedVersion: 2
-        x: 97
-        y: 111
-        width: 14
-        height: 17
+        x: 80
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1397,12 +1397,12 @@ TextureImporter:
       name: NPC_13_46
       rect:
         serializedVersion: 2
-        x: 98
-        y: 95
-        width: 13
-        height: 17
+        x: 96
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1419,12 +1419,12 @@ TextureImporter:
       name: NPC_13_47
       rect:
         serializedVersion: 2
-        x: 113
-        y: 111
-        width: 14
+        x: 112
+        y: 112
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1441,12 +1441,12 @@ TextureImporter:
       name: NPC_13_48
       rect:
         serializedVersion: 2
-        x: 114
-        y: 95
-        width: 13
+        x: 0
+        y: 96
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1463,12 +1463,12 @@ TextureImporter:
       name: NPC_13_49
       rect:
         serializedVersion: 2
-        x: 1
-        y: 79
-        width: 14
-        height: 18
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1485,12 +1485,12 @@ TextureImporter:
       name: NPC_13_50
       rect:
         serializedVersion: 2
-        x: 1
-        y: 63
-        width: 13
-        height: 17
+        x: 32
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1507,12 +1507,12 @@ TextureImporter:
       name: NPC_13_51
       rect:
         serializedVersion: 2
-        x: 17
-        y: 79
-        width: 14
-        height: 17
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1529,12 +1529,12 @@ TextureImporter:
       name: NPC_13_52
       rect:
         serializedVersion: 2
-        x: 17
-        y: 63
-        width: 13
+        x: 64
+        y: 96
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1551,12 +1551,12 @@ TextureImporter:
       name: NPC_13_53
       rect:
         serializedVersion: 2
-        x: 33
-        y: 63
-        width: 13
-        height: 17
+        x: 80
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1573,12 +1573,12 @@ TextureImporter:
       name: NPC_13_54
       rect:
         serializedVersion: 2
-        x: 49
-        y: 79
-        width: 14
-        height: 18
+        x: 96
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1595,12 +1595,12 @@ TextureImporter:
       name: NPC_13_55
       rect:
         serializedVersion: 2
-        x: 49
-        y: 63
-        width: 13
-        height: 17
+        x: 112
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1617,12 +1617,12 @@ TextureImporter:
       name: NPC_13_56
       rect:
         serializedVersion: 2
-        x: 65
-        y: 79
-        width: 14
-        height: 18
+        x: 0
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1639,12 +1639,12 @@ TextureImporter:
       name: NPC_13_57
       rect:
         serializedVersion: 2
-        x: 65
-        y: 63
-        width: 13
-        height: 17
+        x: 16
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1661,12 +1661,12 @@ TextureImporter:
       name: NPC_13_58
       rect:
         serializedVersion: 2
-        x: 81
-        y: 79
-        width: 14
-        height: 17
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1683,12 +1683,12 @@ TextureImporter:
       name: NPC_13_59
       rect:
         serializedVersion: 2
-        x: 81
-        y: 63
-        width: 13
+        x: 48
+        y: 80
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1705,12 +1705,12 @@ TextureImporter:
       name: NPC_13_60
       rect:
         serializedVersion: 2
-        x: 97
-        y: 79
-        width: 14
-        height: 18
+        x: 64
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1727,12 +1727,12 @@ TextureImporter:
       name: NPC_13_61
       rect:
         serializedVersion: 2
-        x: 97
-        y: 63
-        width: 13
-        height: 17
+        x: 80
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1749,12 +1749,12 @@ TextureImporter:
       name: NPC_13_62
       rect:
         serializedVersion: 2
-        x: 113
-        y: 79
-        width: 14
-        height: 17
+        x: 96
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1771,12 +1771,12 @@ TextureImporter:
       name: NPC_13_63
       rect:
         serializedVersion: 2
-        x: 113
-        y: 63
-        width: 13
+        x: 112
+        y: 80
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1793,12 +1793,12 @@ TextureImporter:
       name: NPC_13_64
       rect:
         serializedVersion: 2
-        x: 1
-        y: 47
-        width: 14
-        height: 17
+        x: 0
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1815,12 +1815,12 @@ TextureImporter:
       name: NPC_13_65
       rect:
         serializedVersion: 2
-        x: 2
-        y: 31
-        width: 13
-        height: 17
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1837,12 +1837,12 @@ TextureImporter:
       name: NPC_13_66
       rect:
         serializedVersion: 2
-        x: 17
-        y: 47
-        width: 14
+        x: 32
+        y: 64
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1859,12 +1859,12 @@ TextureImporter:
       name: NPC_13_67
       rect:
         serializedVersion: 2
-        x: 18
-        y: 31
-        width: 13
+        x: 48
+        y: 64
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1881,12 +1881,12 @@ TextureImporter:
       name: NPC_13_68
       rect:
         serializedVersion: 2
-        x: 33
-        y: 47
-        width: 14
-        height: 17
+        x: 64
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1903,12 +1903,12 @@ TextureImporter:
       name: NPC_13_69
       rect:
         serializedVersion: 2
-        x: 33
-        y: 15
-        width: 14
-        height: 33
+        x: 80
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1925,12 +1925,12 @@ TextureImporter:
       name: NPC_13_70
       rect:
         serializedVersion: 2
-        x: 49
-        y: 47
-        width: 14
-        height: 17
+        x: 96
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1947,12 +1947,12 @@ TextureImporter:
       name: NPC_13_71
       rect:
         serializedVersion: 2
-        x: 50
-        y: 31
-        width: 13
-        height: 17
+        x: 112
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1969,12 +1969,12 @@ TextureImporter:
       name: NPC_13_72
       rect:
         serializedVersion: 2
-        x: 65
-        y: 47
-        width: 14
-        height: 17
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1991,12 +1991,12 @@ TextureImporter:
       name: NPC_13_73
       rect:
         serializedVersion: 2
-        x: 66
-        y: 31
-        width: 13
-        height: 17
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2013,12 +2013,12 @@ TextureImporter:
       name: NPC_13_74
       rect:
         serializedVersion: 2
-        x: 81
-        y: 47
-        width: 14
+        x: 32
+        y: 48
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2035,12 +2035,12 @@ TextureImporter:
       name: NPC_13_75
       rect:
         serializedVersion: 2
-        x: 82
-        y: 31
-        width: 13
+        x: 48
+        y: 48
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2057,12 +2057,12 @@ TextureImporter:
       name: NPC_13_76
       rect:
         serializedVersion: 2
-        x: 97
-        y: 47
-        width: 14
-        height: 17
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2079,12 +2079,12 @@ TextureImporter:
       name: NPC_13_77
       rect:
         serializedVersion: 2
-        x: 98
-        y: 31
-        width: 13
-        height: 17
+        x: 80
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2101,12 +2101,12 @@ TextureImporter:
       name: NPC_13_78
       rect:
         serializedVersion: 2
-        x: 113
-        y: 47
-        width: 14
+        x: 96
+        y: 48
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2123,12 +2123,12 @@ TextureImporter:
       name: NPC_13_79
       rect:
         serializedVersion: 2
-        x: 114
-        y: 31
-        width: 13
+        x: 112
+        y: 48
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2145,12 +2145,12 @@ TextureImporter:
       name: NPC_13_80
       rect:
         serializedVersion: 2
-        x: 1
-        y: 15
-        width: 14
-        height: 18
+        x: 0
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2167,12 +2167,12 @@ TextureImporter:
       name: NPC_13_81
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 13
+        x: 16
+        y: 32
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2189,12 +2189,12 @@ TextureImporter:
       name: NPC_13_82
       rect:
         serializedVersion: 2
-        x: 17
-        y: 15
-        width: 14
-        height: 17
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2211,12 +2211,12 @@ TextureImporter:
       name: NPC_13_83
       rect:
         serializedVersion: 2
-        x: 17
-        y: 0
-        width: 13
-        height: 15
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2233,12 +2233,12 @@ TextureImporter:
       name: NPC_13_84
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 13
+        x: 64
+        y: 32
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2255,12 +2255,12 @@ TextureImporter:
       name: NPC_13_85
       rect:
         serializedVersion: 2
-        x: 49
-        y: 15
-        width: 14
-        height: 18
+        x: 80
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2277,12 +2277,12 @@ TextureImporter:
       name: NPC_13_86
       rect:
         serializedVersion: 2
-        x: 49
-        y: 0
-        width: 13
+        x: 96
+        y: 32
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2299,12 +2299,12 @@ TextureImporter:
       name: NPC_13_87
       rect:
         serializedVersion: 2
-        x: 65
-        y: 15
-        width: 14
-        height: 18
+        x: 112
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2321,12 +2321,12 @@ TextureImporter:
       name: NPC_13_88
       rect:
         serializedVersion: 2
-        x: 65
-        y: 0
-        width: 13
+        x: 0
+        y: 16
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2343,12 +2343,12 @@ TextureImporter:
       name: NPC_13_89
       rect:
         serializedVersion: 2
-        x: 81
-        y: 15
-        width: 14
-        height: 17
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2365,12 +2365,12 @@ TextureImporter:
       name: NPC_13_90
       rect:
         serializedVersion: 2
-        x: 81
-        y: 0
-        width: 13
-        height: 15
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2387,12 +2387,12 @@ TextureImporter:
       name: NPC_13_91
       rect:
         serializedVersion: 2
-        x: 97
-        y: 15
-        width: 14
-        height: 18
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2409,12 +2409,12 @@ TextureImporter:
       name: NPC_13_92
       rect:
         serializedVersion: 2
-        x: 97
-        y: 0
-        width: 13
+        x: 64
+        y: 16
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2431,12 +2431,12 @@ TextureImporter:
       name: NPC_13_93
       rect:
         serializedVersion: 2
-        x: 113
-        y: 15
-        width: 14
-        height: 17
+        x: 80
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2453,12 +2453,12 @@ TextureImporter:
       name: NPC_13_94
       rect:
         serializedVersion: 2
-        x: 113
-        y: 0
-        width: 13
-        height: 15
+        x: 96
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2471,11 +2471,209 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: NPC_13_95
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6e8b6c4a8a58af9beefc99d414eac5
+      internalID: -809585131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9022d5b3a453a82a3cd6c6b8347e24
+      internalID: 636149773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_97
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5b5cf04a2418f25a2e5fd2bc706755
+      internalID: 1838937391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_98
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a7e377ca28f825290afe0db5da2453
+      internalID: 1652905196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_99
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c635c21b70d389f9697fcd2336ca4d21
+      internalID: 878437878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_100
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a20b1c2574e9f90b77f2a426d7f2df
+      internalID: 785678254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_101
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb9c8dbf8ff540d08284e1e3b736a76
+      internalID: 1426863043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_102
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb92e2eb27008614d9a7d548aced012d
+      internalID: 1048152538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_13_103
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e67cbd13be86dc16a0963374c6f4872
+      internalID: 1052188055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8bbbdf928af52b68e98cbf2109f57eb8
     internalID: 0
     vertices: []
     indices: 
@@ -2483,11 +2681,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":13.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       NPC_13_0: 1424398866474525077
       NPC_13_1: -401079874584458522
       NPC_13_10: 1973286188733698421
+      NPC_13_100: 785678254
+      NPC_13_101: 1426863043
+      NPC_13_102: 1048152538
+      NPC_13_103: 1052188055
       NPC_13_11: -653875069907409408
       NPC_13_12: -9192655798118096020
       NPC_13_13: 5938292015877842891
@@ -2580,6 +2784,11 @@ TextureImporter:
       NPC_13_92: 949603360935323142
       NPC_13_93: -1471165859937904991
       NPC_13_94: 7567294006877406388
+      NPC_13_95: -809585131
+      NPC_13_96: 636149773
+      NPC_13_97: 1838937391
+      NPC_13_98: 1652905196
+      NPC_13_99: 878437878
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

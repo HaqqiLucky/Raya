@@ -18,6 +18,8 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private CanvasGroup SumurGroupIM;
     [SerializeField] private TMP_Text GantiPeringatan;
     [SerializeField] private CanvasGroup LahanGroup;
+    [SerializeField] private CanvasGroup PatungGroup;
+    [SerializeField] private GameObject Haqi;
     private PlayerInput playerInput;
 
     [Header("Masalah Player")]
@@ -32,6 +34,7 @@ public class RayaInputManagement : MonoBehaviour
     [SerializeField] private InputActionReference pActionRef;
     [SerializeField] private InputActionReference qActionRef;
     [SerializeField] private InputActionReference bActionRef;
+    [SerializeField] private InputActionReference mActionRef;
     // [SerializeField] private DialogueRunner dialogRunner;    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -105,7 +108,7 @@ public class RayaInputManagement : MonoBehaviour
         UIObjektif.SetActive(true);
 
         ActManagement();
-        Debug.Log("Sampe sini");
+        // Debug.Log("Sampe sini");
 
         // semua kondisi mengenai act
         switch (SceneControl.InstanceSceneControl.actNow)
@@ -136,6 +139,16 @@ public class RayaInputManagement : MonoBehaviour
             case (49):
                 LahanOff();
                 break;
+            case (56):
+                CariChestOn();
+                break;
+            case (63):
+                CariChestOff();
+                break;
+            case (65):
+                Haqi.SetActive(false);
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari baru"));
+                break;  
 
         }
     }
@@ -147,6 +160,16 @@ public class RayaInputManagement : MonoBehaviour
         pActionRef.action.Disable();
         qActionRef.action.Disable();
         moveSpeed = 5;
+    }
+
+    private void CariChestOn()
+    {
+        mActionRef.action.Enable();
+    }
+
+    private void CariChestOff()
+    {
+        mActionRef.action.Disable();
     }
 
     private void sumurOn()
@@ -292,6 +315,17 @@ public class RayaInputManagement : MonoBehaviour
         }        
     }
 
+        public void KPatung(InputAction.CallbackContext context)
+    {
+        // k pressed
+        if (context.performed && SceneControl.InstanceSceneControl.actNow == 63 && PatungGroup.alpha > 0)
+        {
+            DialogSelesai();
+            PatungGroup.alpha = 0;
+        }        
+    }
+
+
     public void YNgomongSendiri (InputAction.CallbackContext context)
     {
         // z pressed
@@ -304,6 +338,15 @@ public class RayaInputManagement : MonoBehaviour
                     break;
                 case (26) :
                     _ = dialogRunner.StartDialogue("Act5_0");
+                    break;
+                case (50) :
+                    _ = dialogRunner.StartDialogue("Act5_4");
+                    break;
+                case (55) :
+                    _ = dialogRunner.StartDialogue("Act6_2");
+                    break;
+                case (64) :
+                    _ = dialogRunner.StartDialogue("Act6_3");
                     break;
                 
 
@@ -357,13 +400,40 @@ public class RayaInputManagement : MonoBehaviour
                     lahan.SiramLahan();
 
                     // 2. Tambahkan progress/data di Player
-                    SceneControl.InstanceSceneControl.WaterTakenForLahan += 1;
+                    SceneControl.InstanceSceneControl.WaterTakenForLahan -= 1;
                     DialogSelesai();
                     
                     break; // Keluar dari loop setelah ketemu 1 lahan
                 }
             }
         }        
-    }       
+    }    
+
+
+    public void MChestInteraction(InputAction.CallbackContext context)
+    {
+        // Jika tombol m ditekan
+        if (context.performed)
+        {
+            // Cek semua collider yang bersentuhan dengan Trigger Player
+            Collider2D[] hitColliders = Physics2D.OverlapBoxAll(RayaColliderTrigger.bounds.center, RayaColliderTrigger.bounds.size, 0f);
+
+            foreach (Collider2D hit in hitColliders)
+            {
+                // Ambil script Lahan dari object yang terkena trigger
+                Chest chest = hit.GetComponent<Chest>();
+
+                // Jika object tersebut adalah Lahan DAN belum disiram
+                if (chest != null && !chest.udahDiambil)
+                {
+                    // 1. Panggil fungsi di Script Lahan untuk mengubah bool-nya
+                    chest.DestroyChest();
+                    DialogSelesai();
+                    
+                    break; // Keluar dari loop setelah ketemu 1 lahan
+                }
+            }
+        }        
+    }          
 
 }
