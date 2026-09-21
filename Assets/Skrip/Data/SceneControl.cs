@@ -6,11 +6,20 @@ using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class SceneControl : MonoBehaviour
 {
-    public int actNow = 0;    // ini sama dengan id di data
+      // ini sama dengan id di data
     
+    [Header("Variable")]
+    public int actNow = 0;  
+    public int CatsTaken;
+    public int EmberTaken = 0;
+    public int WaterTakenForLahan = 0;
+    
+
+
     [Header("UI")]
     [SerializeField] private CanvasGroup LayarHitamUI;
     [SerializeField] private GameObject ParentCats;
@@ -18,22 +27,39 @@ public class SceneControl : MonoBehaviour
     [SerializeField] private CanvasGroup ObjektifDiPerbarui;
     [SerializeField] private GameObject SumurTrigger;
     [SerializeField] private TMP_Text GantiDayText;
+
+    [SerializeField] private CanvasGroup SumurGroupIM;
+    [SerializeField] private TMP_Text GantiPeringatan;
+    [SerializeField] private CanvasGroup LahanGroup;
+    [SerializeField] private CanvasGroup PatungGroup;
+    [SerializeField] private GameObject UIObjektif;
+    [SerializeField] private TMP_Text teksObjektif;
+    [SerializeField] private TMP_Text teksKotakNama;
     // private CanvasGroup GantiDayCanvas;
     // [SerializeField] private TMP_Text ObjektifPerAct;
     
     [Header("People")]
+    [SerializeField] private GameObject AllPeople;
     [SerializeField] private GameObject Raya;
     [SerializeField] private GameObject Liam;
     [SerializeField] private GameObject Haqi;
-    [SerializeField] private PlayerInput RayaPlayerInput;
+    [SerializeField] private GameObject Sakinah;
 
 
-    [Header("Variable")]
-    public int CatsTaken;
-    public int EmberTaken = 0;
-    public int WaterTakenForLahan = 0;
+    [Header("Enviroment")]
+    [SerializeField] private Light2D light2D;
+    
+
+
+
     // public string actSaatIni;
     // public string[] objektifAll;
+
+
+    [Header("Raya Input Control")]
+    private PlayerInput playerInput;
+    [SerializeField] private RayaInputManagement rayaInputManagement;
+    [SerializeField] private PlayerInput RayaPlayerInput;
 
 
 
@@ -45,6 +71,7 @@ public class SceneControl : MonoBehaviour
         HideKotakNama();
         ParentCats.SetActive(false);
         SumurTrigger.SetActive(false);
+        playerInput = Raya.GetComponent<PlayerInput>();
         // GantiDayCanvas = GantiDay.GetComponent<CanvasGroup>();
         
     }
@@ -143,6 +170,16 @@ public class SceneControl : MonoBehaviour
         });
     }
 
+    public IEnumerator BlackScreenBiasa()
+    {
+        yield return null;
+        RayaPlayerInput.enabled = false;
+        LayarHitam(true).setOnComplete(() =>
+        {
+            StartCoroutine(TutupGantiDay(3));
+        });
+    }
+
     public IEnumerator Act7Liam2()
     {
         yield return null;
@@ -189,6 +226,119 @@ public class SceneControl : MonoBehaviour
         GantiDayText.gameObject.SetActive(false);
         LayarHitam(false);
         RayaPlayerInput.enabled = true;
+    }
+
+
+
+    public void DialogSelesai( bool actMaju = true )
+    {
+        if (actMaju)
+        {
+            SceneControl.InstanceSceneControl.actNow +=1;
+        }
+        else
+        {
+            SceneControl.InstanceSceneControl.actNow -=1;
+        }
+        GantiPeringatan.text = "Objektif berhasil diperbarui";
+        playerInput.enabled = true;
+        UIObjektif.SetActive(true);
+
+        ActManagement();
+        // Debug.Log("Sampe sini");
+
+        // semua kondisi mengenai act
+        switch (SceneControl.InstanceSceneControl.actNow)
+        {
+            case (3) :
+                SceneControl.InstanceSceneControl.Act3Kucing();
+                break;
+            case (8): 
+                rayaInputManagement.sumurOn();
+                break;
+            case (13):
+                rayaInputManagement.sumurOff();
+                break;
+            case (16):
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari ke-2"));
+                break;
+            // ini ganti
+            case (26):
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari ke-3"));
+                break;
+            case (29):
+                rayaInputManagement.sumurOn();
+                break;
+            case (39):
+                rayaInputManagement.sumurOff();
+                rayaInputManagement.LahanOn();
+                break;
+            case (49):
+                rayaInputManagement.LahanOff();
+                break;
+            case (51):
+                SceneControl.InstanceSceneControl.Act5Haqi();
+                break;
+            case (52):
+                Haqi.SetActive(false);
+                break;
+            case (56):
+                rayaInputManagement.CariChestOn();
+                break;
+            case (63):
+                rayaInputManagement.CariChestOff();
+                break;
+            case (65):
+                StartCoroutine(SceneControl.InstanceSceneControl.GantiDayCorotine("Kau kembali ke pusat dan beristirahat untuk hari ini. Ketika kau bangun tidur kau menyadari hari ini adalah hari ke-4"));
+                Liam.SetActive(true);
+                break;
+            case (67) :
+                StartCoroutine(Act7Liam1());
+                break;
+            case (68) :
+                StartCoroutine(Act7Liam2());
+                break;
+            case (69) :
+                StartCoroutine(BlackScreenBiasa());
+                Liam.SetActive(false);
+                Sakinah.SetActive(true);
+                break;
+            case (71) :
+                StartCoroutine(BlackScreenBiasa());
+                light2D.color = Color.red;
+                AllPeople.SetActive(false);
+                break;
+        }
+    }
+
+    public IEnumerator Objektif()
+    {
+        ShowObjektifDiperbarui();
+        // Debug.Log("sampe siniqqqq");
+        yield return new WaitForSeconds(2f);
+        HideObjektifDiperbarui();
+        // Debug.Log("sampe tutup");
+    }
+
+    public void ActManagement()
+    {
+        ShowObjektifDiperbarui();
+
+        teksObjektif.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.objektif;
+        teksKotakNama.text = QuestData.GetQuestDenganId(SceneControl.InstanceSceneControl.actNow)?.idNPC.ToString();
+
+        StartCoroutine(Objektif());
+    }
+
+
+
+    public void MulaiDialog()
+    {
+        // SceneControl.InstanceSceneControl.HideObjektifDiperbarui();
+        playerInput.enabled = false;
+        UIObjektif.SetActive(false);
+        HideKotakNama();
+        // KameraTurunPasDialog();
     }
 
 // 

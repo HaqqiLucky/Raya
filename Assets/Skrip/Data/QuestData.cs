@@ -132,44 +132,44 @@ public class QuestData
 
         // act 7
         new QuestVariable(65, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act7_0"),
-        new QuestVariable(66, NPCidTranlate.Liam, "Cari bocil di sekitar hutan", "Act7_1"),
+        new QuestVariable(66, NPCidTranlate.Liam, "Cari bocil di sekitar hutan sebelah barat", "Act7_1"),
         new QuestVariable(67, NPCidTranlate.Liam, "Cari Liam", "Act7_2"),
         new QuestVariable(68, NPCidTranlate.Liam, "Cari Liam lagi", "Act7_3"),
-        new QuestVariable(69, NPCidTranlate.Raya, "Cari bocil di tengah hutan", "Act7_4"),
-        new QuestVariable(70, NPCidTranlate.Raya, "Dekati bocil cewe", "Act7_5"),
-        new QuestVariable(71, NPCidTranlate.Sakinah, "Ajak bicara si bocil", "Act7_6"),
+        new QuestVariable(69, NPCidTranlate.Raya, "Cari bocil di hutan sebelah barat (Tekan Y) ", "Act7_4"),
+        // new QuestVariable(70, NPCidTranlate.Raya, "Dekati bocil cewe", "Act7_5"),
+        new QuestVariable(70, NPCidTranlate.Sakinah, "Ajak bicara si bocil", "Act7_6"),
 
         // act 8
-        new QuestVariable(37, NPCidTranlate.Raya, "Kembali ke pusat dan kabari anisa", "Act8_0"),
-        new QuestVariable(38, NPCidTranlate.Raya, "Investigasi area patung", "Act8_1_1Patung"),
-        new QuestVariable(39, NPCidTranlate.Raya, "Investigasi area perumahan", "Act8_1_2Perumahan"),
-        new QuestVariable(40, NPCidTranlate.Raya, "Jalan ke arah pusat", "Act8_2"),
+        new QuestVariable(71, NPCidTranlate.Anisa, "Kembali ke pusat dan kabari anisa", "Act8_0"),
+        new QuestVariable(72, NPCidTranlate.Raya, "Investigasi area patung", "Act8_1_1Patung"),
+        new QuestVariable(73, NPCidTranlate.Raya, "Investigasi area perumahan", "Act8_1_2Perumahan"),
+        new QuestVariable(74, NPCidTranlate.Raya, "Jalan ke arah pusat", "Act8_2"),
 
         // act 9
-        new QuestVariable(41, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act9_0"),
-        new QuestVariable(42, NPCidTranlate.Raka, "Bicara dengan pak raka", "Act9_1"),
-        new QuestVariable(43, NPCidTranlate.Raka, "Selesaikan tugasmu dengan pak raka", "Act9_2"), // ambil ember 5
+        new QuestVariable(75, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act9_0"),
+        new QuestVariable(76, NPCidTranlate.Raka, "Bicara dengan pak raka", "Act9_1"),
+        new QuestVariable(77, NPCidTranlate.Raka, "Selesaikan tugasmu dengan pak raka", "Act9_2"), // ambil ember 5
 
         // act 10
-        new QuestVariable(44, NPCidTranlate.Raya, "Diskusikan dengan dirimu sendiri", "Act10_0"),
-        new QuestVariable(45, NPCidTranlate.Raya, "Pergi ke patung dewi takdir", "Act10_1"),
-        new QuestVariable(46, NPCidTranlate.Raya, "Cari semua peti yang tersisa dan berikan sebagai persembahan", "Act10_2"),
-        new QuestVariable(47, NPCidTranlate.Raya, "Diskusikan dengan dirimu", "Act10_3"),
-        new QuestVariable(48, NPCidTranlate.Anisa, "Pergi ke pusat dan beritahukan anisa", "Act10_4"),
-        new QuestVariable(49, NPCidTranlate.Raya, "Introgasi patung", "Act10_5"),
-        new QuestVariable(50, NPCidTranlate.Reza, "Bicara dengan ???", "Act10_6"),
-        new QuestVariable(51, NPCidTranlate.Raya, "Bicara dengan si penjaga takdir?", "Act10_7"),
+        new QuestVariable(78, NPCidTranlate.Raya, "Diskusikan dengan dirimu sendiri", "Act10_0"),
+        new QuestVariable(79, NPCidTranlate.Raya, "Pergi ke patung dewi takdir", "Act10_1"),
+        new QuestVariable(80, NPCidTranlate.Raya, "Cari semua peti yang tersisa dan berikan sebagai persembahan", "Act10_2"),
+        new QuestVariable(81, NPCidTranlate.Raya, "Diskusikan dengan dirimu", "Act10_3"),
+        new QuestVariable(82, NPCidTranlate.Anisa, "Pergi ke pusat dan beritahukan anisa", "Act10_4"),
+        new QuestVariable(83, NPCidTranlate.Raya, "Introgasi patung", "Act10_5"),
+        new QuestVariable(84, NPCidTranlate.Reza, "Bicara dengan ???", "Act10_6"),
+        new QuestVariable(85, NPCidTranlate.Raya, "Bicara dengan si penjaga takdir?", "Act10_7"),
 
 
         // act 11
-        new QuestVariable(52, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act11_0"),
-        new QuestVariable(53, NPCidTranlate.Raya, "Pergi ke hutan dan tinggalkan surat", "Act11_1"),
+        new QuestVariable(86, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act11_0"),
+        new QuestVariable(87, NPCidTranlate.Raya, "Pergi ke hutan dan tinggalkan surat", "Act11_1"),
 
 
         // act 12
-        new QuestVariable(54, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act12_0"),
-        new QuestVariable(55, NPCidTranlate.Anisa, "Kalahkan dia", "Act12_1"),
-        new QuestVariable(56, NPCidTranlate.Raya, "lorem ipsum dolor sit amet consectetur adipiscing elit ipsum similique tempore duis velit consectetur", "Act12_2"),
+        new QuestVariable(88, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act12_0"),
+        new QuestVariable(89, NPCidTranlate.Anisa, "Kalahkan dia", "Act12_1"),
+        new QuestVariable(90, NPCidTranlate.Raya, "lorem ipsum dolor sit amet consectetur adipiscing elit ipsum similique tempore duis velit consectetur", "Act12_2"),
 
 
 
