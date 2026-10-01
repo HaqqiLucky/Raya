@@ -1,11 +1,31 @@
-﻿title: Act8_0
----
-Dalam hati : Udah selesai semua waktunya balik ke mba anis
-===
+﻿// title: Act8_0
+// ---
+// Dalam hati : Udah selesai semua waktunya balik ke mba anis
+// ===
 
 title: Act8_1
 ---
-Dalam hati: Kok sepi ya.. dimana orang orang
+Weathered: Some old data can't be deleted because you still open it... Now opening these data
+Weathered : File name : ꦎꦩꦺꦴꦤ꧀ꦒꦤ꧀ ꦧꦂ ꦮꦶꦱꦸꦢ.txt
+???: ꦏꦺꦴꦮꦺ ꦏꦶ ꦭꦺꦴ ꦠꦏ꧀ ꦏꦺꦴꦤ꧀ ꦒꦺꦴꦭꦺꦏ꧀ ꦏꦺꦂꦗꦺꦴ ꦩꦭꦃ ꦤꦤ꧀ꦒ꧀ ꦲꦺꦴꦩꦃ ꦲꦲꦺ꧈​ ꦲꦺꦴꦫ ꦱꦺꦥꦺꦠ꧀ ꦥꦺꦴ ꦩꦠꦩꦸ ꦮꦶ
+ꦲꦏꦸ?: ꦲꦏꦸ ꦭꦺꦴ ꦮꦺꦱ꧀ ꦤ꧀ꦒꦶꦫꦶꦩꦶ ꦤꦺꦤ꧀ꦒ꧀ ꦤ꧀ꦢꦶ ꦤ꧀ꦢꦶ ꦒ ꦲꦺꦤꦺꦏ꧀ ꦱꦺꦤ꧀ꦒ꧀ ꦤ꧀ꦒꦺꦫꦺꦱ꧀ꦥꦺꦴꦤ꧀ ꦲꦏꦸ꧈​ ꦠꦺꦫꦸꦱ꧀ ꦏꦺꦴꦤ꧀ ꦥꦶꦪꦺ ꦗꦭ꧀꧉​ ꦧꦸꦤ꧀ ꦲꦏꦸ ꦏꦶ ꦪꦺꦴ ꦩꦺꦴꦃ ꦤꦺꦤ꧀ꦒ꧀ ꦲꦺꦴꦩꦃ ꦲꦲꦺ꧉​ ꦄꦏꦸ ꦥꦺꦤ꧀ꦒꦺꦤ꧀ ꦩꦺꦠꦸ ꦗꦭꦤ꧀ ꦗꦭꦤ꧀
+???: ꦲꦭꦃ ꦏꦺꦴꦮꦺ ꦲꦲꦲꦺ ꦧꦺꦤ꧀ ꦢꦶꦤ ꦩꦲꦺꦤ꧀ ꦒꦺꦩ꧀ ꦲꦲꦲꦺ ꦠꦺꦫꦃ ꦏꦺꦴꦮꦺ ꦱꦺꦤ꧀ꦒ꧀ ꦩꦭꦺꦱ꧀ ꦲꦶꦏꦶ
+Weathered: Remain data cannot be read.. Skipping to other file
+Weathered : File name : ꦎꦩꦺꦴꦤ꧀ꦒꦤ꧀ ꦧꦂ ꦮꦶꦱꦸꦢ.txt
+ꦲꦏꦸ?: ꦩꦸꦤ꧀ꦒ꧀ꦏꦶꦤ꧀ ꦤꦺꦏ꧀ ꦲꦏꦸ ꦒꦏ꧀ ꦲꦺꦴꦤꦺꦴ꧈​ ꦩꦺꦫꦺꦏ ꦧꦏꦭ꧀ ꦱꦺꦤꦺꦤ꧀ꦒ꧀꧈​ ꦏꦺꦠ꧀ ꦧꦶꦪꦺꦤ꧀ ꦩꦺꦴꦂ ꦢꦢꦶ ꦧꦺꦧꦤ꧀ ꦲꦲꦺ ꦲꦏꦸ
+Weathered: R..🔲🔲🔲 🔲🔲🔲🔲 🔲🔲🔲🔲 be read.. Skipping to 🔲🔲🔲🔲 file
+Weathered : File name : raya.txt
+Weathered: This file is protected by password..Please enter the password
+-> Skip the file
+-> admin123
+    Weathered: Password is wr🔲🔲🔲
+Weathered: Skipping the file
+Weathered: Now scanning malicious files
+<<unglitch "SceneControl">>
+Weathered: All malicious files has been cleared
+Weathered: Refreshing...
+<<show_bug "SceneControl">>
+
 ===
 
 

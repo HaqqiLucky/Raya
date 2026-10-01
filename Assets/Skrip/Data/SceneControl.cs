@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using KinoGlitch;
 using TMPro;
 using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using Yarn.Unity;
 
 public class SceneControl : MonoBehaviour
 {
@@ -27,7 +30,7 @@ public class SceneControl : MonoBehaviour
     [SerializeField] private CanvasGroup ObjektifDiPerbarui;
     [SerializeField] private GameObject SumurTrigger;
     [SerializeField] private TMP_Text GantiDayText;
-
+    [SerializeField] private CanvasGroup BugLayar;
     [SerializeField] private CanvasGroup SumurGroupIM;
     [SerializeField] private TMP_Text GantiPeringatan;
     [SerializeField] private CanvasGroup LahanGroup;
@@ -44,10 +47,16 @@ public class SceneControl : MonoBehaviour
     [SerializeField] private GameObject Liam;
     [SerializeField] private GameObject Haqi;
     [SerializeField] private GameObject Sakinah;
+    [SerializeField] private GameObject CustomersRaka;
 
 
     [Header("Enviroment")]
     [SerializeField] private Light2D light2D;
+    [SerializeField] private DigitalGlitchController digitalGlitchController;
+
+    [Header("Volume - Global")]
+    [SerializeField] private Volume globalVolume;
+    private Vignette vignette;
     
 
 
@@ -68,7 +77,9 @@ public class SceneControl : MonoBehaviour
     void Start()
     {
         // ObjektifDiPerbarui.gameObject.SetActive(false);
+        globalVolume.profile.TryGet(out vignette);
         HideKotakNama();
+        CustomersRaka.SetActive(false);
         ParentCats.SetActive(false);
         SumurTrigger.SetActive(false);
         playerInput = Raya.GetComponent<PlayerInput>();
@@ -301,16 +312,64 @@ public class SceneControl : MonoBehaviour
             case (69) :
                 StartCoroutine(BlackScreenBiasa());
                 Liam.SetActive(false);
-                Sakinah.SetActive(true);
+                Sakinah.SetActive(true);    
                 break;
             case (71) :
                 StartCoroutine(BlackScreenBiasa());
-                light2D.color = Color.red;
-                AllPeople.SetActive(false);
+                Invoke("Case71Glitch", 2f);
+                break;
+            case (73) :
+                StartCoroutine(GantiDayCorotine("K🔲🔲 🔲🔲🔲🔲🔲🔲 🔲🔲🔲🔲 🔲🔲🔲🔲🔲 🔲🔲🔲 🔲🔲 🔲🔲🔲 men🔲🔲🔲ari har🔲🔲 ini a🔲🔲🔲🔲h h🔲ri 🔲🔲-5"));
+                Invoke("unglitch73", 2f);
+                RedCorner();
+                break;
+            case (74) :
+                CustomersRaka.SetActive(true);
+                RedCorner();
+                break;
+            case (75): 
+                rayaInputManagement.sumurOn();
+                break;
+            case (76):
+                rayaInputManagement.sumurOff();
                 break;
         }
     }
 
+    private void RedCorner()
+    {
+        vignette.intensity.value += 0.05f;
+    }
+
+    private void unglitch73()
+    {
+        digitalGlitchController.Intensity = 0;
+    }
+
+
+    private void Case71Glitch()
+    {
+        // GlitchSlider(0f,0.1f, 10f );
+        light2D.color = Color.red;
+        AllPeople.SetActive(false);
+    }
+
+    [YarnCommand("unglitch")]
+    public void Case71Unglitch()
+    {
+        // GlitchSlider(0f,0.1f, 10f );
+        light2D.color = Color.white;
+        AllPeople.SetActive(true);
+    }
+
+    private void GlitchSlider(float from, float target, float time)
+    {
+        LeanTween.value(digitalGlitchController.gameObject, from, target, time)
+            .setEase(LeanTweenType.easeOutQuad)
+            .setOnUpdate((float val) => {
+                digitalGlitchController.Intensity = val;
+            });
+    }
     public IEnumerator Objektif()
     {
         ShowObjektifDiperbarui();
@@ -339,6 +398,32 @@ public class SceneControl : MonoBehaviour
         UIObjektif.SetActive(false);
         HideKotakNama();
         // KameraTurunPasDialog();
+    }
+    [YarnCommand("show_bug")]
+    public void ShowBug()
+    {
+        StartCoroutine(UrutanBug());
+    }
+
+    IEnumerator UrutanBug()
+    {
+        Time.timeScale = 0f;
+        LeanTween.alphaCanvas(BugLayar, 0.35f, 0.2f)
+            .setIgnoreTimeScale(true);
+        Debug.Log("sampe sini");
+        yield return new WaitForSecondsRealtime(4f);
+        Debug.Log("udah 4s");
+        Time.timeScale = 1f;
+        LeanTween.cancelAll();
+        LeanTween.alphaCanvas(BugLayar, 0f, 0.5f)
+            .setOnComplete(() =>
+            {
+                digitalGlitchController.Intensity = 1;
+            });
+        yield return new WaitForSecondsRealtime(3f);
+        Debug.Log("udah 5 detik");
+        DialogSelesai();
+
     }
 
 // 

@@ -41,7 +41,6 @@ public class RayaInputManagement : MonoBehaviour
         RayaColliderTrigger = GetComponentInChildren<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
     }
 
     // Update is called once per frame
@@ -53,7 +52,6 @@ public class RayaInputManagement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-
         if (moveInput.x < 0)
         {
             transform.rotation = Quaternion.Euler(0f,180f,0f);
@@ -65,17 +63,12 @@ public class RayaInputManagement : MonoBehaviour
         if (context.performed)
         {
             animator.SetFloat("Blend", 1);
-            
         }
         if (context.canceled)
         {
             animator.SetFloat("Blend", 0);
         }
-
     }
-
-
-
 
     public void InteractionWithNPC(InputAction.CallbackContext context)
     {
@@ -265,6 +258,9 @@ public class RayaInputManagement : MonoBehaviour
                     break;
                 case (69) :
                     _ = dialogRunner.StartDialogue("Act6_3");
+                    break;
+                case (71) :
+                    _ = dialogRunner.StartDialogue("Act8_1");
                     break;
                 
 

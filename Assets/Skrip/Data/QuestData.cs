@@ -140,25 +140,30 @@ public class QuestData
         new QuestVariable(70, NPCidTranlate.Sakinah, "Ajak bicara si bocil", "Act7_6"),
 
         // act 8
-        new QuestVariable(71, NPCidTranlate.Anisa, "Kembali ke pusat dan kabari anisa", "Act8_0"),
-        new QuestVariable(72, NPCidTranlate.Raya, "Investigasi area patung", "Act8_1_1Patung"),
-        new QuestVariable(73, NPCidTranlate.Raya, "Investigasi area perumahan", "Act8_1_2Perumahan"),
-        new QuestVariable(74, NPCidTranlate.Raya, "Jalan ke arah pusat", "Act8_2"),
+        new QuestVariable(71, NPCidTranlate.Anisa, "Cari tahu apa yang terjadi (Tekan Y)", "Act8_1"),
+        new QuestVariable(721, NPCidTranlate.Raya, "ꦥꦼꦂꦒꦶ  ꦏꦼ  ꦥꦠꦸꦁ", "Act8_1_1Patung"),
+        new QuestVariable(731, NPCidTranlate.Raya, "Investigasi area perumahan", "Act8_1_2Perumahan"),
+        new QuestVariable(722, NPCidTranlate.Raya, "Jalan ke arah pusat", "Act8_2"),
 
         // act 9
-        new QuestVariable(75, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act9_0"),
-        new QuestVariable(76, NPCidTranlate.Raka, "Bicara dengan pak raka", "Act9_1"),
-        new QuestVariable(77, NPCidTranlate.Raka, "Selesaikan tugasmu dengan pak raka", "Act9_2"), // ambil ember 5
+        new QuestVariable(73, NPCidTranlate.Anisa, "Bicara dengan anisa", "Act9_0"),
+        new QuestVariable(74, NPCidTranlate.Raka, "Bicara dengan pak raka", "Act9_1"),
+        new QuestVariable(75, NPCidTranlate.Sumoar, "Ambil air untuk pak raka (0/5)", "Act9_1"),
+        new QuestVariable(76, NPCidTranlate.Sumoar, "Ambil air untuk pak raka (1/5)", "Act9_1"),
+        new QuestVariable(77, NPCidTranlate.Sumoar, "Ambil air untuk pak raka (2/5)", "Act9_1"),
+        new QuestVariable(78, NPCidTranlate.Sumoar, "Ambil air untuk pak raka (3/5)", "Act9_1"),
+        new QuestVariable(79, NPCidTranlate.Sumoar, "Ambil air untuk pak raka (4/5)", "Act9_1"),
+        new QuestVariable(80, NPCidTranlate.Raka, "Selesaikan tugasmu dengan pak raka", "Act9_2"), // ambil ember 5
 
         // act 10
-        new QuestVariable(78, NPCidTranlate.Raya, "Diskusikan dengan dirimu sendiri", "Act10_0"),
-        new QuestVariable(79, NPCidTranlate.Raya, "Pergi ke patung dewi takdir", "Act10_1"),
-        new QuestVariable(80, NPCidTranlate.Raya, "Cari semua peti yang tersisa dan berikan sebagai persembahan", "Act10_2"),
-        new QuestVariable(81, NPCidTranlate.Raya, "Diskusikan dengan dirimu", "Act10_3"),
-        new QuestVariable(82, NPCidTranlate.Anisa, "Pergi ke pusat dan beritahukan anisa", "Act10_4"),
-        new QuestVariable(83, NPCidTranlate.Raya, "Introgasi patung", "Act10_5"),
-        new QuestVariable(84, NPCidTranlate.Reza, "Bicara dengan ???", "Act10_6"),
-        new QuestVariable(85, NPCidTranlate.Raya, "Bicara dengan si penjaga takdir?", "Act10_7"),
+        new QuestVariable(76, NPCidTranlate.Raya, "Diskusikan dengan dirimu sendiri", "Act10_0"),
+        new QuestVariable(77, NPCidTranlate.Raya, "Pergi ke patung dewi takdir", "Act10_1"),
+        new QuestVariable(78, NPCidTranlate.Raya, "Cari semua peti yang tersisa dan berikan sebagai persembahan", "Act10_2"),
+        new QuestVariable(79, NPCidTranlate.Raya, "Diskusikan dengan dirimu", "Act10_3"),
+        new QuestVariable(80, NPCidTranlate.Anisa, "Pergi ke pusat dan beritahukan anisa", "Act10_4"),
+        new QuestVariable(81, NPCidTranlate.Raya, "Introgasi patung", "Act10_5"),
+        new QuestVariable(82, NPCidTranlate.Reza, "Bicara dengan ???", "Act10_6"),
+        new QuestVariable(83, NPCidTranlate.Raya, "Bicara dengan si penjaga takdir?", "Act10_7"),
 
 
         // act 11
